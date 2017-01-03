@@ -14,7 +14,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet var tvcTask: UITableView!
     var tasks : [Task] = []
     var editIndex: IndexPath!
-    var temp = 0 //added new variable
     
     override func viewDidLoad() {
         super.viewDidLoad()

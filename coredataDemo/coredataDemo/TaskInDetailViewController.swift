@@ -40,8 +40,6 @@ class TaskInDetailViewController: UIViewController ,UITableViewDelegate,UITableV
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        
-        
         let header = UIView()
         header.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width , height: 60)
         header.backgroundColor = UIColor.groupTableViewBackground
@@ -104,7 +102,6 @@ class TaskInDetailViewController: UIViewController ,UITableViewDelegate,UITableV
         let count = task.employees?.count
         if(task.isImportant){
             return "😰" + task.name! + " - \(count!)"
-            
         }else{
             return task.name! + " - \(count!)"
         }
