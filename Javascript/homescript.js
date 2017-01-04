@@ -21,7 +21,6 @@ function isValidData() {
         isValid = false
         errorHtml += "<br/>Invalid salary."
     }
-
     if (!isValid) {
         document.getElementById('error').innerHTML = errorHtml;
     } else {
