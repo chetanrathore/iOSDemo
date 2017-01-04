@@ -1,0 +1,15 @@
+.center{
+    align-items:center;
+}
+input[type=submit]{
+    height: 30px;
+    width: 100px;
+}
+.txtField{
+    height: 20px;
+    width: 220px;
+}
+.btn{
+    height: 20px;
+    width: 100px;
+}
