@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({limit:'50mb',extended:true}));
 
 connection.init();
 
+
 app.get('/',function(req, res) {
     res.send({msg:'success........'});
 });

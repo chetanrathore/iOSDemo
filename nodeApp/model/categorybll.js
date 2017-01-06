@@ -1,18 +1,78 @@
-const dbCon = require('./../connection.js');
+const dbCon = require('./../connection');
 const _ = require('lodash');
+var Promise = require("bluebird");
 
-exports.getAll = function(callback){
+module.exports = {
+    getAllCategory: getAllCategory,
+    createCategory: createCategory,
+    updateCategory: updateCategory,
+    deleteCategory: deleteCategory,
+    getCategoryById: getCategoryById,
+};
+
+function getAllCategory(callback){
     var sql = "select * from Category order by categoryId";
-    dbCon.executeSql(sql, function(err, result) {
-       if (err) {
-           callback(err, null);
-       }  else {
-           callback(null, result);
-       }
+    return new Promise(function (resolve, reject) {
+        dbCon.executeSql(sql, function(err, result) {
+            return (err ? reject(err) : resolve(result));
+        });
     });
 }
 
-exports.create = function(category, callback) {
+function createCategory(category, callback) {
+    category = _.pick(category,['categoryName', 'description']);
+    var sql = "insert into Category set ?";
+    return new Promise(function (resolve, reject) {
+        dbCon.executeInsert(sql, category, function (err, result) {
+            if (err) {
+                reject({ message: ERROR.CATEGORY_INSERT_FAIL });
+            }else{
+                resolve(result);
+            }
+        });
+    });
+}
+
+function updateCategory(category, callback) {
+    category = _.pick(category, ['categoryId', 'categoryName', 'description']);
+    let sql = "update Category set ? where categoryId = ?";
+    return new Promise(function (resolve, reject) {
+        dbCon.executeUpdate(sql, category, category.categoryId, function (err, result) {
+            if (err) {
+                reject(err);
+            }else{
+                resolve(result);
+            }
+        });
+    });
+}
+
+function deleteCategory(id, callback) {
+    let sql = "delete from Category where categoryId = " + id;
+    return new Promise(function (resolve, reject) {
+        dbCon.executeSql(sql, function(err, result){
+            if (err) {
+                reject(err);
+            }else{
+                resolve(result);
+            }
+        });
+    });
+}
+
+function getCategoryById(id, callback) {
+    let sql = "select categoryId, categoryName, description from Category where categoryId = " + id;
+    dbCon.executeSql(sql, function (err, result) {
+        if (err){
+            callback(err, null);
+        }else{
+            callback(null, result);
+        }
+    });
+}
+
+/*
+createCategory = function(category, callback) {
     category = _.pick(category,['categoryName', 'description']);
     var sql = "insert into Category set ?";
     dbCon.executeInsert(sql, category, function (err, result) {
@@ -24,7 +84,7 @@ exports.create = function(category, callback) {
     });
 }
 
-exports.update = function (category, callback) {
+updateCategory = function (category, callback) {
     category = _.pick(category, ['categoryId', 'categoryName', 'description']);
     let sql = "update Category set ? where categoryId = ?";
     dbCon.executeUpdate(sql, category, category.categoryId, function (err, result) {
@@ -36,7 +96,7 @@ exports.update = function (category, callback) {
     });
 }
 
-exports.delete = function (id, callback) {
+deleteCategory = function (id, callback) {
     let sql = "delete from Category where categoryId = " + id;
     dbCon.executeSql(sql, function(err, result){
         if (err) {
@@ -47,7 +107,7 @@ exports.delete = function (id, callback) {
     });
 }
 
-exports.getById = function (id, callback) {
+getCategoryById = function (id, callback) {
     let sql = "select categoryId, categoryName, description from Category where categoryId = " + id;
     dbCon.executeSql(sql, function (err, result) {
        if (err){
@@ -57,3 +117,4 @@ exports.getById = function (id, callback) {
        }
     });
 }
+*/

@@ -1,9 +1,58 @@
 const express = require('express');
 const router = express.Router();
+const boom = require("boom");
+
 const categoryBLL = require('./../model/categorybll');
 
+var constants = require('./../constant');
+var ERROR = constants.ERRORS;
+var MESSAGE = constants.MESSAGES;
+
 router.get('/category',function (req, res, next) {
-    categoryBLL.getAll(function (err, result) {
+    categoryBLL.getAllCategory().then(function(result) {
+        res.send(result);
+    })
+        .error(function (err) {
+
+    })
+});
+
+router.post('/category', function (req, res, next) {
+    categoryBLL.createCategory(req.body).then(function(result) {
+        res.send({ message: MESSAGE.CATEGORY_INSERTED });
+    })
+        .error(function (err) {
+            res.send({ message: ERROR.CATEGORY_INSERT_FAIL });
+    })
+});
+
+router.put('/category', function (req, res, next) {
+    categoryBLL.updateCategory(req.body).then(function(result) {
+        res.send(result);
+    })
+        .error(function (err) {
+    })
+});
+
+router.delete('/category/:id', function (req, res, next) {
+    categoryBLL.deleteCategory(req.params.id).then(function(result) {
+        res.send(result);
+    })
+        .error(function (err) {
+    })
+});
+
+router.get('/category/:id', function (req, res, next) {
+   categoryBLL.getCategoryById(req.params.id).then(function(result) {
+        res.send(result);
+   })
+       .error(function (err) {
+   })
+});
+
+/*
+router.get('/category',function (req, res, next) {
+    categoryBLL.getAllCategory(function (err, result) {
        if (err) {
            return next(err);
        } else {
@@ -13,7 +62,7 @@ router.get('/category',function (req, res, next) {
 });
 
 router.post('/category', function (req, res, next) {
-    categoryBLL.create(req.body, function (err, result) {
+    categoryBLL.createCategory(req.body, function (err, result) {
        if (err) {
            return next(err);
        } else {
@@ -23,7 +72,7 @@ router.post('/category', function (req, res, next) {
 });
 
 router.put('/category', function (req, res, next) {
-   categoryBLL.update(req.body, function (err, result) {
+   categoryBLL.updateCategory(req.body, function (err, result) {
         if (err) {
             return next(err);
         }else{
@@ -33,7 +82,7 @@ router.put('/category', function (req, res, next) {
 });
 
 router.delete('/category/:id', function (req, res, next) {
-    categoryBLL.delete(req.params.id, function (err, result) {
+    categoryBLL.deleteCategory(req.params.id, function (err, result) {
         if (err) {
             return next(err);
         }else {
@@ -43,7 +92,7 @@ router.delete('/category/:id', function (req, res, next) {
 });
 
 router.get('/category/:id', function (req, res, next) {
-    categoryBLL.getById(req.params.id, function (err, result) {
+    categoryBLL.getCategoryById(req.params.id, function (err, result) {
        if (err) {
            return next(err);
        }else{
@@ -51,5 +100,5 @@ router.get('/category/:id', function (req, res, next) {
        }
     });
 });
-
+*/
 module.exports = router;
