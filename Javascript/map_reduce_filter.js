@@ -40,3 +40,6 @@ var employees = [
 
 const totalSalary = employees.reduce((preVal,element) => preVal + element.salary, 0);
 console.log(totalSalary);
+
+const arrName = employees.reduce((preVal,element) => preVal + element.name,0);
+console.log(arrName);
