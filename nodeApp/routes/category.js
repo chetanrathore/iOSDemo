@@ -12,16 +12,17 @@ router.get('/category',function (req, res, next) {
     categoryBLL.getAllCategory().then(function(result) {
         res.send(result);
     })
-        .error(function (err) {
-
+        .catch(function (err) {
+        res.send(err);
     })
 });
 
 router.post('/category', function (req, res, next) {
-    categoryBLL.createCategory(req.body).then(function(result) {
-        res.send({ message: MESSAGE.CATEGORY_INSERTED });
+    categoryBLL.createCategory(req.body)
+        .then(function(result) {
+            res.send({ message: MESSAGE.CATEGORY_INSERTED });
     })
-        .error(function (err) {
+        .catch(function (err) {
             res.send({ message: ERROR.CATEGORY_INSERT_FAIL });
     })
 });
@@ -30,7 +31,7 @@ router.put('/category', function (req, res, next) {
     categoryBLL.updateCategory(req.body).then(function(result) {
         res.send(result);
     })
-        .error(function (err) {
+        .catch(function (err) {
     })
 });
 
@@ -38,7 +39,7 @@ router.delete('/category/:id', function (req, res, next) {
     categoryBLL.deleteCategory(req.params.id).then(function(result) {
         res.send(result);
     })
-        .error(function (err) {
+        .catch(function (err) {
     })
 });
 
@@ -46,11 +47,12 @@ router.get('/category/:id', function (req, res, next) {
    categoryBLL.getCategoryById(req.params.id).then(function(result) {
         res.send(result);
    })
-       .error(function (err) {
+       .catch(function (err) {
    })
 });
 
 /*
+// function Callback
 router.get('/category',function (req, res, next) {
     categoryBLL.getAllCategory(function (err, result) {
        if (err) {

@@ -10,7 +10,7 @@ module.exports = {
     getCategoryById: getCategoryById,
 };
 
-function getAllCategory(callback){
+function getAllCategory(){
     var sql = "select * from Category order by categoryId";
     return new Promise(function (resolve, reject) {
         dbCon.executeSql(sql, function(err, result) {
@@ -19,7 +19,7 @@ function getAllCategory(callback){
     });
 }
 
-function createCategory(category, callback) {
+function createCategory(category) {
     category = _.pick(category,['categoryName', 'description']);
     var sql = "insert into Category set ?";
     return new Promise(function (resolve, reject) {
@@ -33,7 +33,7 @@ function createCategory(category, callback) {
     });
 }
 
-function updateCategory(category, callback) {
+function updateCategory(category) {
     category = _.pick(category, ['categoryId', 'categoryName', 'description']);
     let sql = "update Category set ? where categoryId = ?";
     return new Promise(function (resolve, reject) {
@@ -47,7 +47,7 @@ function updateCategory(category, callback) {
     });
 }
 
-function deleteCategory(id, callback) {
+function deleteCategory(id) {
     let sql = "delete from Category where categoryId = " + id;
     return new Promise(function (resolve, reject) {
         dbCon.executeSql(sql, function(err, result){
@@ -60,18 +60,23 @@ function deleteCategory(id, callback) {
     });
 }
 
-function getCategoryById(id, callback) {
+
+function getCategoryById(id) {
     let sql = "select categoryId, categoryName, description from Category where categoryId = " + id;
-    dbCon.executeSql(sql, function (err, result) {
-        if (err){
-            callback(err, null);
-        }else{
-            callback(null, result);
-        }
+    return new Promise(function (resolve, reject) {
+        dbCon.executeSql(sql, function (err, result) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(result);
+            }
+        });
     });
 }
 
 /*
+// function callback
+
 createCategory = function(category, callback) {
     category = _.pick(category,['categoryName', 'description']);
     var sql = "insert into Category set ?";
