@@ -60,7 +60,6 @@ function deleteCategory(id) {
     });
 }
 
-
 function getCategoryById(id) {
     let sql = "select categoryId, categoryName, description from Category where categoryId = " + id;
     return new Promise(function (resolve, reject) {
