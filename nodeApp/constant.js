@@ -1,4 +1,3 @@
-
 module.exports = {
     ERRORS: {
         CATEGORY_NOT_FOUND: "Category details not found.",
