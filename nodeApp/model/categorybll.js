@@ -25,7 +25,7 @@ function createCategory(category) {
     return new Promise(function (resolve, reject) {
         dbCon.executeInsert(sql, category, function (err, result) {
             if (err) {
-                reject({ message: ERROR.CATEGORY_INSERT_FAIL });
+                reject(err);
             }else{
                 resolve(result);
             }
