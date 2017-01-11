@@ -8,6 +8,7 @@ var MESSAGE = constants.MESSAGES;
 var multer = require("multer");
 const uuidV4 = require('uuid/v4');
 var fileName = "";
+
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
        // console.log("Inside destination" + file.originalname);
