@@ -12,11 +12,12 @@ app.use(bodyParser.urlencoded({limit:'50mb',extended:true}));
 
 connection.init();
 
-
-app.get('/',function(req, res) {
-    res.send({msg:'success........'});
+// app.get('/',function(req, res) {
+//     res.send({msg:'success........'});
+// });
+app.get('/', function (req, res) {
+    res.sendFile(__dirname + "/index.html");
 });
-
 //define routes
 app.use(require('./routes/index'));
 

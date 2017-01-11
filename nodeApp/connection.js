@@ -1,5 +1,4 @@
 const mysql = require('mysql');
-
 var Promise = require("bluebird");
 Promise.promisifyAll(require("mysql/lib/Connection").prototype);
 Promise.promisifyAll(require("mysql/lib/Pool").prototype);
@@ -17,23 +16,6 @@ function Connection() {
             multipleStatements: true
         });
     };
-
-    // this.connect = function(){
-    //     console.log("Inside connect");
-    //     return new Promise(function (resolve, reject) {
-    //         var mysqlConnection = this.pool.getConnection();
-    //
-    //         mysqlConnection.on('ready', function () {
-    //             console.log("Connect");
-    //             resolve(mysqlConnection);
-    //         });
-    //         mysqlConnection.on('error', function (err) {
-    //             console.log("Fail");
-    //             reject(err);
-    //         });
-    //
-    //     });
-    // };
 
     this.executeSql=function (sql,callback) {
         this.pool.getConnection(function (err,connection) {
