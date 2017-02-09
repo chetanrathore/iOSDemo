@@ -1,13 +1,20 @@
 module.exports = {
     ERRORS: {
-        CATEGORY_NOT_FOUND: "Category details not found.",
-        CATEGORY_INSERT_FAIL: "Fail to insert category",
-        CATEGORY_DELETE_FAIL: "Fail to delete category",
-        CATEGORY_UPDATE_FAIL: "Fail to update category",
+        NOT_FOUND: "Details not found.",
+        INSERT_FAIL: "Fail to insert",
+        DELETE_FAIL: "Fail to delete",
+        UPDATE_FAIL: "Fail to update",
+        EMAIL_Id_EXISTS: "Email Id already exists",
+        REGISTRATION_FAIL: "Registration fail",
+        WRONG_USERNAME: "login fail, wrong username",
+        WRONG_PASSWORD: "Login fail, wrong password",
+        LOGIN_FAIL: "Login fail, please try again",
     },
     MESSAGES: {
-    CATEGORY_INSERTED: "Successfully inserted",
-    CATEGORY_DELETED: "Successfully deleted",
-    CATEGORY_UPDATED: "Successfully to updated",
+        INSERTED: "Successfully inserted",
+        DELETED: "Successfully deleted",
+        UPDATED: "Successfully to updated",
+        REGISTERED: "Successfully register",
+        LOGIN_SUCCESS: "Successfully login"
     },
 }

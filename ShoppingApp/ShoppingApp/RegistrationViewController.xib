@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController" customModule="ShoppingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnLoginNow" destination="GCG-lr-YGE" id="gOp-MY-MP9"/>
+                <outlet property="btnRegister" destination="yBg-0s-xwe" id="eLM-kG-fWg"/>
+                <outlet property="lblSignUp" destination="k8m-Fv-O17" id="CNh-dj-ZNG"/>
+                <outlet property="txtFullname" destination="0vm-cR-37e" id="kak-Dx-QF6"/>
+                <outlet property="txtPassword" destination="MTy-5m-PtE" id="GfA-Gy-w5d"/>
+                <outlet property="txtUsername" destination="Hdt-DC-DPg" id="f2w-wi-kvD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfc-Kg-duw">
+                    <rect key="frame" x="0.0" y="66" width="320" height="348"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0vm-cR-37e" customClass="TextField" customModule="ShoppingApp" customModuleProvider="target">
+                            <rect key="frame" x="20" y="67" width="280" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="B5e-yx-Rt7"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCG-lr-YGE">
+                            <rect key="frame" x="20" y="287" width="280" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="PLn-bc-TnV"/>
+                            </constraints>
+                            <state key="normal" title="Already register? Sign In"/>
+                            <connections>
+                                <action selector="btnLoginNow:" destination="-1" eventType="touchUpInside" id="rdJ-vL-s8A"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBg-0s-xwe">
+                            <rect key="frame" x="20" y="237" width="280" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="CA6-we-6oz"/>
+                            </constraints>
+                            <state key="normal" title="Register">
+                                <color key="titleColor" red="0.96078431369999995" green="0.28235294119999998" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnRegister:" destination="-1" eventType="touchUpInside" id="4h0-eh-QT9"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8m-Fv-O17">
+                            <rect key="frame" x="20" y="8" width="280" height="39"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="39" id="0bn-uV-Uax"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Id" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hdt-DC-DPg" customClass="TextField" customModule="ShoppingApp" customModuleProvider="target">
+                            <rect key="frame" x="20" y="122" width="280" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="ChA-WR-o48"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MTy-5m-PtE" customClass="TextField" customModule="ShoppingApp" customModuleProvider="target">
+                            <rect key="frame" x="20" y="177" width="280" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="PUk-tt-ILu"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="yBg-0s-xwe" firstAttribute="top" secondItem="MTy-5m-PtE" secondAttribute="bottom" constant="20" id="0oV-L5-Esf"/>
+                        <constraint firstAttribute="trailing" secondItem="Hdt-DC-DPg" secondAttribute="trailing" constant="20" id="7RB-VV-dW9"/>
+                        <constraint firstAttribute="trailing" secondItem="yBg-0s-xwe" secondAttribute="trailing" constant="20" id="9hD-Te-4bC"/>
+                        <constraint firstAttribute="trailing" secondItem="MTy-5m-PtE" secondAttribute="trailing" constant="20" id="C1M-CM-afe"/>
+                        <constraint firstAttribute="trailing" secondItem="k8m-Fv-O17" secondAttribute="trailing" constant="20" id="FGT-RY-vIr"/>
+                        <constraint firstItem="0vm-cR-37e" firstAttribute="top" secondItem="k8m-Fv-O17" secondAttribute="bottom" constant="20" id="Hia-G8-NAf"/>
+                        <constraint firstItem="MTy-5m-PtE" firstAttribute="top" secondItem="Hdt-DC-DPg" secondAttribute="bottom" constant="15" id="HpQ-Br-EyC"/>
+                        <constraint firstItem="k8m-Fv-O17" firstAttribute="top" secondItem="dfc-Kg-duw" secondAttribute="top" constant="8" id="I6C-P7-lwN"/>
+                        <constraint firstItem="k8m-Fv-O17" firstAttribute="leading" secondItem="dfc-Kg-duw" secondAttribute="leading" constant="20" id="JUr-Qe-Vft"/>
+                        <constraint firstAttribute="trailing" secondItem="GCG-lr-YGE" secondAttribute="trailing" constant="20" id="QiI-lS-35w"/>
+                        <constraint firstItem="yBg-0s-xwe" firstAttribute="leading" secondItem="dfc-Kg-duw" secondAttribute="leading" constant="20" id="RTc-Hn-KYC"/>
+                        <constraint firstItem="Hdt-DC-DPg" firstAttribute="top" secondItem="0vm-cR-37e" secondAttribute="bottom" constant="15" id="SSO-Vn-QyR"/>
+                        <constraint firstAttribute="height" constant="348" id="TVl-Uo-y1K"/>
+                        <constraint firstItem="GCG-lr-YGE" firstAttribute="top" secondItem="yBg-0s-xwe" secondAttribute="bottom" constant="10" id="d7A-lI-XzJ"/>
+                        <constraint firstItem="0vm-cR-37e" firstAttribute="leading" secondItem="dfc-Kg-duw" secondAttribute="leading" constant="20" id="h8F-VA-jnj"/>
+                        <constraint firstAttribute="trailing" secondItem="0vm-cR-37e" secondAttribute="trailing" constant="20" id="hn4-ov-aUX"/>
+                        <constraint firstItem="MTy-5m-PtE" firstAttribute="leading" secondItem="dfc-Kg-duw" secondAttribute="leading" constant="20" id="jtY-ze-tq8"/>
+                        <constraint firstItem="GCG-lr-YGE" firstAttribute="leading" secondItem="dfc-Kg-duw" secondAttribute="leading" constant="20" id="l4k-dc-Z7w"/>
+                        <constraint firstItem="Hdt-DC-DPg" firstAttribute="leading" secondItem="dfc-Kg-duw" secondAttribute="leading" constant="20" id="vg6-6L-Pja"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dfc-Kg-duw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="C9J-o6-SPw"/>
+                <constraint firstAttribute="trailing" secondItem="dfc-Kg-duw" secondAttribute="trailing" id="Z7n-bZ-l5U"/>
+                <constraint firstItem="dfc-Kg-duw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="qwY-uX-ssA"/>
+            </constraints>
+            <point key="canvasLocation" x="-302" y="29"/>
+        </view>
+    </objects>
+</document>

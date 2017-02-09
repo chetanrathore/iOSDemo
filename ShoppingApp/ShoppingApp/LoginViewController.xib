@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="ShoppingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnLogin" destination="Ddh-HR-P3g" id="irE-cr-FF9"/>
+                <outlet property="btnRegisterNow" destination="JVE-aG-tQk" id="T0V-Au-4cB"/>
+                <outlet property="lblSignIn" destination="Mg6-xa-6FL" id="ggB-Mb-z0j"/>
+                <outlet property="txtPassword" destination="M70-s4-19J" id="dcs-YF-S2u"/>
+                <outlet property="txtUsername" destination="g94-dv-xQT" id="czh-aD-C9l"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rx-OF-xNH">
+                    <rect key="frame" x="0.0" y="88" width="320" height="305"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="UserName" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="g94-dv-xQT" customClass="TextField" customModule="ShoppingApp" customModuleProvider="target">
+                            <rect key="frame" x="20" y="67" width="280" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="oyV-Cm-Den"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M70-s4-19J" customClass="TextField" customModule="ShoppingApp" customModuleProvider="target">
+                            <rect key="frame" x="20" y="122" width="280" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="qak-kJ-lW1"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddh-HR-P3g">
+                            <rect key="frame" x="20" y="182" width="280" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="fLu-JN-vXa"/>
+                            </constraints>
+                            <state key="normal" title="Sign In"/>
+                            <connections>
+                                <action selector="btnSignIn:" destination="-1" eventType="touchUpInside" id="0Eb-AF-OXC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVE-aG-tQk">
+                            <rect key="frame" x="20" y="232" width="280" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="nge-KX-vU5"/>
+                            </constraints>
+                            <state key="normal" title="Register now?">
+                                <color key="titleColor" red="0.96078431372549022" green="0.28235294117647058" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnRegisterNow:" destination="-1" eventType="touchUpInside" id="Q24-FY-jni"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mg6-xa-6FL">
+                            <rect key="frame" x="20" y="8" width="280" height="39"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="39" id="mFP-ev-3pA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Ddh-HR-P3g" secondAttribute="trailing" constant="20" id="4hf-JT-d91"/>
+                        <constraint firstItem="g94-dv-xQT" firstAttribute="leading" secondItem="9Rx-OF-xNH" secondAttribute="leading" constant="20" id="76S-aF-Ovv"/>
+                        <constraint firstItem="JVE-aG-tQk" firstAttribute="top" secondItem="Ddh-HR-P3g" secondAttribute="bottom" constant="10" id="7qv-Mv-0ot"/>
+                        <constraint firstAttribute="height" constant="305" id="Bhy-kC-3Jy"/>
+                        <constraint firstItem="Ddh-HR-P3g" firstAttribute="top" secondItem="M70-s4-19J" secondAttribute="bottom" constant="20" id="FfS-zA-zg4"/>
+                        <constraint firstItem="M70-s4-19J" firstAttribute="leading" secondItem="9Rx-OF-xNH" secondAttribute="leading" constant="20" id="Oll-Nm-DJY"/>
+                        <constraint firstItem="g94-dv-xQT" firstAttribute="top" secondItem="Mg6-xa-6FL" secondAttribute="bottom" constant="20" id="QB9-oU-ymV"/>
+                        <constraint firstAttribute="trailing" secondItem="Mg6-xa-6FL" secondAttribute="trailing" constant="20" id="WW4-l4-DbP"/>
+                        <constraint firstItem="JVE-aG-tQk" firstAttribute="leading" secondItem="9Rx-OF-xNH" secondAttribute="leading" constant="20" id="b4p-4E-9Ne"/>
+                        <constraint firstAttribute="trailing" secondItem="JVE-aG-tQk" secondAttribute="trailing" constant="20" id="bUK-zL-gJw"/>
+                        <constraint firstAttribute="trailing" secondItem="g94-dv-xQT" secondAttribute="trailing" constant="20" id="dXE-th-yEP"/>
+                        <constraint firstItem="Mg6-xa-6FL" firstAttribute="leading" secondItem="9Rx-OF-xNH" secondAttribute="leading" constant="20" id="jbo-cJ-W0h"/>
+                        <constraint firstAttribute="trailing" secondItem="M70-s4-19J" secondAttribute="trailing" constant="20" id="k89-XX-8db"/>
+                        <constraint firstItem="Mg6-xa-6FL" firstAttribute="top" secondItem="9Rx-OF-xNH" secondAttribute="top" constant="8" id="msO-S2-neJ"/>
+                        <constraint firstItem="M70-s4-19J" firstAttribute="top" secondItem="g94-dv-xQT" secondAttribute="bottom" constant="15" id="oN5-Ou-R6K"/>
+                        <constraint firstItem="Ddh-HR-P3g" firstAttribute="leading" secondItem="9Rx-OF-xNH" secondAttribute="leading" constant="20" id="s6U-ki-DXu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9Rx-OF-xNH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="I1k-Bt-4At"/>
+                <constraint firstAttribute="trailing" secondItem="9Rx-OF-xNH" secondAttribute="trailing" id="pO8-Jh-MS8"/>
+                <constraint firstItem="9Rx-OF-xNH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rtw-gY-eeN"/>
+            </constraints>
+            <point key="canvasLocation" x="-586" y="-330"/>
+        </view>
+    </objects>
+</document>
