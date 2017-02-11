@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form id        =  "uploadForm"
+      enctype   =  "multipart/form-data"
+      action    =  "/api/product"
+      method    =  "post">
+    <br/><br/>
+    procutName: <input type="text" name="productName" /><br/>
+    description: <input type="text" name="description" /><br/>
+    retailProce: <input type="number" name="retailPrice" /><br/>
+    sellingPrice: <input type="number" name="sellingPrice" /><br/>
+    quantity: <input type="number" name="quantity" /><br/>
+    categoryId: <input type="number" name="categoryId" /><br/>
+    image <input type="file" name="productImage" multiple="multiple"/> <br/>
+    <input type="submit" value="Save" name="submit"/>
+</form>
+
+</body>
+</html>

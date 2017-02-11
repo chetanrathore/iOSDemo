@@ -15,8 +15,12 @@ connection.init();
 // app.get('/',function(req, res) {
 //     res.send({msg:'success........'});
 // });
-app.get('/', function (req, res) {
-    res.sendFile(__dirname + "/index.html");
+app.get('/category', function (req, res) {
+    res.sendFile(__dirname + "/category.html");
+});
+
+app.get('/product', function (req, res) {
+    res.sendFile(__dirname + "/product.html");
 });
 //define routes
 app.use(require('./routes/index'));

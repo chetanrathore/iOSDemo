@@ -12,7 +12,7 @@ var fileName = "";
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
        // console.log("Inside destination" + file.originalname);
-        callback(null, './public/');
+        callback(null, './public/category/');
     },
     filename: function (req, file, callback) {
         // console.log("Inside filename" + file.originalname);
@@ -36,28 +36,28 @@ router.post('/category', upload, function (req, res, next) {
     req.body.categoryImage = fileName;
     categoryBLL.createCategory(req.body)
         .then(function(result) {
-            res.status(200).json({ message: MESSAGE.CATEGORY_INSERTED});
+            res.status(200).json({status: 1, message: MESSAGE.INSERTED});
     })
         .catch(function (err) {
-            res.status(404).json({ message: ERROR.CATEGORY_INSERT_FAIL});
+            res.status(404).json({status: 0, message: ERROR.INSERT_FAIL});
     })
 });
 
 router.put('/category', function (req, res, next) {
     categoryBLL.updateCategory(req.body).then(function(result) {
-        res.status(200).json({ message: MESSAGE.CATEGORY_UPDATED});
+        res.status(200).json({status: 1, message: MESSAGE.UPDATED});
     })
         .catch(function (err) {
-            res.status(404).json({ message: ERROR.CATEGORY_UPDATE_FAIL});
+            res.status(404).json({status: 0, message: ERROR.UPDATE_FAIL});
     })
 });
 
 router.delete('/category/:id', function (req, res, next) {
     categoryBLL.deleteCategory(req.params.id).then(function(result) {
-        res.status(200).json({ message: MESSAGE.CATEGORY_DELETED});
+        res.status(200).json({status: 1, message: MESSAGE.DELETED});
     })
         .catch(function (err) {
-            res.status(404).json({ message: ERROR.CATEGORY_DELETE_FAIL});
+            res.status(404).json({status: 0, message: ERROR.DELETE_FAIL});
     })
 });
 
