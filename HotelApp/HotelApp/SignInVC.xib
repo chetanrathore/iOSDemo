@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInVC" customModule="HotelApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnSignIn" destination="D0I-ZW-FfO" id="Mpo-jP-vDg"/>
+                <outlet property="txtEmail" destination="bfP-3h-mz6" id="AwY-Wb-dhd"/>
+                <outlet property="txtPassword" destination="hc4-6D-qtQ" id="W2M-Fa-cay"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hc4-6D-qtQ">
+                    <rect key="frame" x="20" y="268" width="280" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="C9v-2O-Da3"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfP-3h-mz6">
+                    <rect key="frame" x="20" y="220" width="280" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="OLz-J8-IFL"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0I-ZW-FfO">
+                    <rect key="frame" x="20" y="410" width="280" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="O4C-Cy-HaU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Sign In">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="handleBtnSignIn:" destination="-1" eventType="touchUpInside" id="V1E-Xo-7Rs"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="lDa-Oy-zlQ">
+                    <rect key="frame" x="110" y="75" width="100" height="100.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="lDa-Oy-zlQ" secondAttribute="height" multiplier="1:1" id="yqN-kz-iQT"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lDa-Oy-zlQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="2mV-fO-X0q"/>
+                <constraint firstAttribute="trailing" secondItem="bfP-3h-mz6" secondAttribute="trailing" constant="20" id="4Ex-ZL-Xvr"/>
+                <constraint firstItem="lDa-Oy-zlQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8Dk-1s-gNm"/>
+                <constraint firstItem="bfP-3h-mz6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="I2C-bQ-B45"/>
+                <constraint firstItem="lDa-Oy-zlQ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="5:24" id="IaN-R1-X5i"/>
+                <constraint firstItem="bfP-3h-mz6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="JFj-tk-cTj"/>
+                <constraint firstAttribute="trailing" secondItem="D0I-ZW-FfO" secondAttribute="trailing" constant="20" id="JhW-vN-HTX"/>
+                <constraint firstItem="hc4-6D-qtQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="LRo-5z-0K0"/>
+                <constraint firstItem="hc4-6D-qtQ" firstAttribute="top" secondItem="bfP-3h-mz6" secondAttribute="bottom" constant="8" id="TVX-ip-ppO"/>
+                <constraint firstItem="D0I-ZW-FfO" firstAttribute="top" secondItem="hc4-6D-qtQ" secondAttribute="bottom" constant="102" id="dK2-67-1GY"/>
+                <constraint firstItem="bfP-3h-mz6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="iIk-yT-aPO"/>
+                <constraint firstItem="D0I-ZW-FfO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="mJ2-ek-fzq"/>
+                <constraint firstAttribute="trailing" secondItem="hc4-6D-qtQ" secondAttribute="trailing" constant="20" id="nCH-vp-lec"/>
+            </constraints>
+            <point key="canvasLocation" x="578" y="-87"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="appicon" width="139" height="140"/>
+    </resources>
+</document>

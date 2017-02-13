@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapVC" customModule="HotelApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAction" destination="y15-PU-Q7H" id="PCi-OW-Vam"/>
+                <outlet property="btnNavLeft" destination="K86-OA-d5n" id="fju-xj-acL"/>
+                <outlet property="btnUserLocation" destination="hme-3n-Rc6" id="G0b-XG-Kam"/>
+                <outlet property="map" destination="7nc-BB-ZHV" id="DnN-Bw-4a3"/>
+                <outlet property="txtSearchbar" destination="b7E-Lj-7rS" id="PXy-8G-wrg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fB-me-Rgf">
+                    <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y15-PU-Q7H">
+                            <rect key="frame" x="275" y="0.0" width="40" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K86-OA-d5n">
+                            <rect key="frame" x="5" y="0.0" width="40" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <searchBar contentMode="redraw" fixedFrame="YES" placeholder="map" translatesAutoresizingMaskIntoConstraints="NO" id="b7E-Lj-7rS">
+                            <rect key="frame" x="45" y="0.0" width="230" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Title</string>
+                            </scopeButtonTitles>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Ce5-xl-7R6"/>
+                    </constraints>
+                </view>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7nc-BB-ZHV">
+                    <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                </mapView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ND7-9J-1MC">
+                    <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Gvh-jn-da1"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem title="Item" id="cGI-7I-P5O"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="cCg-nF-WF7"/>
+                        <barButtonItem title="Item" id="KL2-Z6-D6q"/>
+                    </items>
+                </toolbar>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hme-3n-Rc6">
+                    <rect key="frame" x="242" y="359" width="70" height="70"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" image="location.png"/>
+                    <connections>
+                        <action selector="handleBtnUserLocation:" destination="-1" eventType="touchUpInside" id="tCR-lH-PKC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4fB-me-Rgf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4rS-XK-MW2"/>
+                <constraint firstAttribute="trailing" secondItem="ND7-9J-1MC" secondAttribute="trailing" id="Cpe-MV-zrU"/>
+                <constraint firstItem="4fB-me-Rgf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="G2L-e3-WgZ"/>
+                <constraint firstAttribute="trailing" secondItem="7nc-BB-ZHV" secondAttribute="trailing" id="ILQ-JN-mxu"/>
+                <constraint firstItem="7nc-BB-ZHV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UAD-9R-up4"/>
+                <constraint firstAttribute="bottom" secondItem="ND7-9J-1MC" secondAttribute="bottom" id="X5D-oi-MmV"/>
+                <constraint firstItem="ND7-9J-1MC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bXj-Zo-tqQ"/>
+                <constraint firstAttribute="trailing" secondItem="4fB-me-Rgf" secondAttribute="trailing" id="fQW-sa-cK2"/>
+                <constraint firstItem="ND7-9J-1MC" firstAttribute="top" secondItem="7nc-BB-ZHV" secondAttribute="bottom" id="sU2-U1-Xil"/>
+                <constraint firstItem="7nc-BB-ZHV" firstAttribute="top" secondItem="4fB-me-Rgf" secondAttribute="bottom" id="sm6-vB-Wd0"/>
+            </constraints>
+            <point key="canvasLocation" x="-686" y="-209"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="location.png" width="52" height="52"/>
+    </resources>
+</document>
