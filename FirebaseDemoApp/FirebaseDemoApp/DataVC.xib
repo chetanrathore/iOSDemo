@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DataVC" customModule="FirebaseDemoApp" customModuleProvider="target">
+            <connections>
+                <outlet property="tblItem" destination="qgj-pg-25W" id="1qi-du-xEv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qgj-pg-25W">
+                    <rect key="frame" x="0.0" y="90" width="320" height="390"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1b-e5-9PF">
+                    <rect key="frame" x="217" y="59" width="87" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Add Item"/>
+                    <connections>
+                        <action selector="btnAddItem:" destination="-1" eventType="touchUpInside" id="qQs-t4-HcW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qgj-pg-25W" secondAttribute="bottom" id="0JZ-pg-w1r"/>
+                <constraint firstAttribute="trailing" secondItem="qgj-pg-25W" secondAttribute="trailing" id="Zma-fm-X4R"/>
+                <constraint firstItem="qgj-pg-25W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jtU-HS-tuO"/>
+                <constraint firstItem="qgj-pg-25W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="v3z-ZG-Kuv"/>
+            </constraints>
+            <point key="canvasLocation" x="-110" y="48"/>
+        </view>
+    </objects>
+</document>

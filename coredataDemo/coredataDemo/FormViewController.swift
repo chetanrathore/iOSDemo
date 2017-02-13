@@ -122,6 +122,7 @@ class FormViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
     func addTask(){
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let task = Task(context: context)
+        
         task.name = txtTask.text!
         task.isImportant = isImportant.isOn
         

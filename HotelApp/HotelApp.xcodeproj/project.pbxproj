@@ -17,6 +17,8 @@
 		0CB526D71E4F03D600422BDC /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CB526D61E4F03D600422BDC /* Arrow.png */; };
 		0CB526DA1E4F285900422BDC /* ProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB526D81E4F285900422BDC /* ProgressVC.swift */; };
 		0CB526DB1E4F285900422BDC /* ProgressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB526D91E4F285900422BDC /* ProgressVC.xib */; };
+		0CB526DE1E4F422300422BDC /* AutoSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB526DC1E4F422300422BDC /* AutoSizeCell.swift */; };
+		0CB526DF1E4F422300422BDC /* AutoSizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB526DD1E4F422300422BDC /* AutoSizeCell.xib */; };
 		0CD3D3D71E4D9BBD0028BEE5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD3D3D51E4D9BBD0028BEE5 /* MapVC.swift */; };
 		0CD3D3D81E4D9BBD0028BEE5 /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD3D3D61E4D9BBD0028BEE5 /* MapVC.xib */; };
 		0CFDAA381E4C96C20020FCEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFDAA371E4C96C20020FCEB /* AppDelegate.swift */; };
@@ -39,6 +41,8 @@
 		0CB526D61E4F03D600422BDC /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow.png; sourceTree = "<group>"; };
 		0CB526D81E4F285900422BDC /* ProgressVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressVC.swift; sourceTree = "<group>"; };
 		0CB526D91E4F285900422BDC /* ProgressVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressVC.xib; sourceTree = "<group>"; };
+		0CB526DC1E4F422300422BDC /* AutoSizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeCell.swift; sourceTree = "<group>"; };
+		0CB526DD1E4F422300422BDC /* AutoSizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoSizeCell.xib; sourceTree = "<group>"; };
 		0CD3D3D51E4D9BBD0028BEE5 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		0CD3D3D61E4D9BBD0028BEE5 /* MapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapVC.xib; sourceTree = "<group>"; };
 		0CFDAA341E4C96C20020FCEB /* HotelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +115,8 @@
 				0CB526D11E4F002100422BDC /* WeeklyDataCell.xib */,
 				0CB526D81E4F285900422BDC /* ProgressVC.swift */,
 				0CB526D91E4F285900422BDC /* ProgressVC.xib */,
+				0CB526DC1E4F422300422BDC /* AutoSizeCell.swift */,
+				0CB526DD1E4F422300422BDC /* AutoSizeCell.xib */,
 			);
 			path = HotelApp;
 			sourceTree = "<group>";
@@ -179,6 +185,7 @@
 				0CFDAA3F1E4C96C20020FCEB /* Assets.xcassets in Resources */,
 				0CB526D51E4F00D700422BDC /* star.png in Resources */,
 				0CFDAA4C1E4C96DC0020FCEB /* SignInVC.xib in Resources */,
+				0CB526DF1E4F422300422BDC /* AutoSizeCell.xib in Resources */,
 				0CD3D3D81E4D9BBD0028BEE5 /* MapVC.xib in Resources */,
 				0CB526D71E4F03D600422BDC /* Arrow.png in Resources */,
 				0CB526CF1E4EFDD700422BDC /* WeekViewController.xib in Resources */,
@@ -196,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CB526CE1E4EFDD700422BDC /* WeekViewController.swift in Sources */,
+				0CB526DE1E4F422300422BDC /* AutoSizeCell.swift in Sources */,
 				0CFDAA3A1E4C96C20020FCEB /* ViewController.swift in Sources */,
 				0CD3D3D71E4D9BBD0028BEE5 /* MapVC.swift in Sources */,
 				0CFDAA381E4C96C20020FCEB /* AppDelegate.swift in Sources */,
