@@ -80,7 +80,6 @@ class EmployeeViewController: UIViewController,UITableViewDelegate,UITableViewDa
         // let request = NSFetchRequest<Employee>(entityName: "Employee")
         do{
             let data = try context.fetch(request)
-            
             self.employees = []
             self.employees = data
             
@@ -113,5 +112,5 @@ class EmployeeViewController: UIViewController,UITableViewDelegate,UITableViewDa
         let manageEmpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ManageEmployeeVC") as! ManageEmployeeViewController
         self.navigationController?.pushViewController(manageEmpVC, animated: true)
     }
-
+    
 }
