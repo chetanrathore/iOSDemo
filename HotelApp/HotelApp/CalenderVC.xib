@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalenderVC" customModule="HotelApp" customModuleProvider="target">
+            <connections>
+                <outlet property="calendar" destination="FGD-fD-rWO" id="Smf-dQ-Yns"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGD-fD-rWO" customClass="FSCalendar">
+                    <rect key="frame" x="0.0" y="90" width="320" height="280"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="H7J-H2-gxu"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="pagingEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="FGD-fD-rWO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DHp-Hu-Sf3"/>
+                <constraint firstAttribute="trailing" secondItem="FGD-fD-rWO" secondAttribute="trailing" id="UDs-ag-Sl2"/>
+                <constraint firstItem="FGD-fD-rWO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="vrK-hg-W5E"/>
+            </constraints>
+            <point key="canvasLocation" x="-219" y="54"/>
+        </view>
+    </objects>
+</document>
