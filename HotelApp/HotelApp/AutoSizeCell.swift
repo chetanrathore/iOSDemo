@@ -9,6 +9,9 @@
 import UIKit
 
 class AutoSizeCell: UITableViewCell {
+    
+    @IBOutlet var lblName: UILabel!
+    @IBOutlet var lblAddress: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,8 +20,6 @@ class AutoSizeCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

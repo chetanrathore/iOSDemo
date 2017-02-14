@@ -21,6 +21,8 @@
 		0CB526DF1E4F422300422BDC /* AutoSizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB526DD1E4F422300422BDC /* AutoSizeCell.xib */; };
 		0CD3D3D71E4D9BBD0028BEE5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD3D3D51E4D9BBD0028BEE5 /* MapVC.swift */; };
 		0CD3D3D81E4D9BBD0028BEE5 /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD3D3D61E4D9BBD0028BEE5 /* MapVC.xib */; };
+		0CFCE1301E52FF4600E8DE0E /* AutoresizeCellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCE12E1E52FF4600E8DE0E /* AutoresizeCellVC.swift */; };
+		0CFCE1311E52FF4600E8DE0E /* AutoresizeCellVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CFCE12F1E52FF4600E8DE0E /* AutoresizeCellVC.xib */; };
 		0CFDAA381E4C96C20020FCEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFDAA371E4C96C20020FCEB /* AppDelegate.swift */; };
 		0CFDAA3A1E4C96C20020FCEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFDAA391E4C96C20020FCEB /* ViewController.swift */; };
 		0CFDAA3D1E4C96C20020FCEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CFDAA3B1E4C96C20020FCEB /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		0CB526DD1E4F422300422BDC /* AutoSizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoSizeCell.xib; sourceTree = "<group>"; };
 		0CD3D3D51E4D9BBD0028BEE5 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		0CD3D3D61E4D9BBD0028BEE5 /* MapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapVC.xib; sourceTree = "<group>"; };
+		0CFCE12E1E52FF4600E8DE0E /* AutoresizeCellVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoresizeCellVC.swift; sourceTree = "<group>"; };
+		0CFCE12F1E52FF4600E8DE0E /* AutoresizeCellVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoresizeCellVC.xib; sourceTree = "<group>"; };
 		0CFDAA341E4C96C20020FCEB /* HotelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFDAA371E4C96C20020FCEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CFDAA391E4C96C20020FCEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				0CB526D91E4F285900422BDC /* ProgressVC.xib */,
 				0CB526DC1E4F422300422BDC /* AutoSizeCell.swift */,
 				0CB526DD1E4F422300422BDC /* AutoSizeCell.xib */,
+				0CFCE12E1E52FF4600E8DE0E /* AutoresizeCellVC.swift */,
+				0CFCE12F1E52FF4600E8DE0E /* AutoresizeCellVC.xib */,
 			);
 			path = HotelApp;
 			sourceTree = "<group>";
@@ -185,6 +191,7 @@
 				0CFDAA3F1E4C96C20020FCEB /* Assets.xcassets in Resources */,
 				0CB526D51E4F00D700422BDC /* star.png in Resources */,
 				0CFDAA4C1E4C96DC0020FCEB /* SignInVC.xib in Resources */,
+				0CFCE1311E52FF4600E8DE0E /* AutoresizeCellVC.xib in Resources */,
 				0CB526DF1E4F422300422BDC /* AutoSizeCell.xib in Resources */,
 				0CD3D3D81E4D9BBD0028BEE5 /* MapVC.xib in Resources */,
 				0CB526D71E4F03D600422BDC /* Arrow.png in Resources */,
@@ -210,6 +217,7 @@
 				0CB526D21E4F002100422BDC /* WeeklyDataCell.swift in Sources */,
 				0CB526DA1E4F285900422BDC /* ProgressVC.swift in Sources */,
 				0CFDAA4B1E4C96DC0020FCEB /* SignInVC.swift in Sources */,
+				0CFCE1301E52FF4600E8DE0E /* AutoresizeCellVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
