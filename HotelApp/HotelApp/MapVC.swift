@@ -96,16 +96,18 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIS
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last! as CLLocation
-        
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.08, longitudeDelta: 0.08))
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = center
-        annotation.title = "My location"
-        
-        self.map.setRegion(region, animated: true)
-        self.map.addAnnotation(annotation)
+        if self.map.userLocation.coordinate.latitude != location.coordinate.latitude ||
+            self.map.userLocation.coordinate.longitude != location.coordinate.longitude {
+            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.08, longitudeDelta: 0.08))
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = center
+            annotation.title = "My location"
+            
+            self.map.setRegion(region, animated: true)
+            self.map.addAnnotation(annotation)
+        }
         self.locationManager.stopUpdatingLocation()
     }
     

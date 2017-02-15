@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let signInVC = ProgressVC(nibName: "ProgressVC", bundle: nil)
+        let signInVC = MapVC(nibName: "MapVC", bundle: nil)
         let navigationVC = UINavigationController(rootViewController: signInVC)
         window?.rootViewController = navigationVC
         
