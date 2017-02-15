@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5F84C61E54266A0055E4AD /* RestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F84C41E54266A0055E4AD /* RestaurantVC.swift */; };
+		0C5F84C71E54266A0055E4AD /* RestaurantVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5F84C51E54266A0055E4AD /* RestaurantVC.xib */; };
 		0C8C61921E4EDEF90016DDD2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8C61911E4EDEF90016DDD2 /* MapKit.framework */; };
 		0C8C61941E4EEBDC0016DDD2 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8C61931E4EEBDC0016DDD2 /* location.png */; };
+		0C90D4761E5430A8008CBD6E /* RestuarantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90D4741E5430A8008CBD6E /* RestuarantCell.swift */; };
+		0C90D4771E5430A8008CBD6E /* RestuarantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C90D4751E5430A8008CBD6E /* RestuarantCell.xib */; };
+		0C90D4791E544C10008CBD6E /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C90D4781E544C10008CBD6E /* 5.jpg */; };
 		0CB526CE1E4EFDD700422BDC /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB526CC1E4EFDD700422BDC /* WeekViewController.swift */; };
 		0CB526CF1E4EFDD700422BDC /* WeekViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB526CD1E4EFDD700422BDC /* WeekViewController.xib */; };
 		0CB526D21E4F002100422BDC /* WeeklyDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB526D01E4F002100422BDC /* WeeklyDataCell.swift */; };
@@ -55,8 +60,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C5F84C41E54266A0055E4AD /* RestaurantVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantVC.swift; sourceTree = "<group>"; };
+		0C5F84C51E54266A0055E4AD /* RestaurantVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantVC.xib; sourceTree = "<group>"; };
 		0C8C61911E4EDEF90016DDD2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0C8C61931E4EEBDC0016DDD2 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		0C90D4741E5430A8008CBD6E /* RestuarantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestuarantCell.swift; sourceTree = "<group>"; };
+		0C90D4751E5430A8008CBD6E /* RestuarantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestuarantCell.xib; sourceTree = "<group>"; };
+		0C90D4781E544C10008CBD6E /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		0CB526CC1E4EFDD700422BDC /* WeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
 		0CB526CD1E4EFDD700422BDC /* WeekViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekViewController.xib; sourceTree = "<group>"; };
 		0CB526D01E4F002100422BDC /* WeeklyDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyDataCell.swift; sourceTree = "<group>"; };
@@ -201,6 +211,7 @@
 		0CFDAA361E4C96C20020FCEB /* HotelApp */ = {
 			isa = PBXGroup;
 			children = (
+				0C90D4781E544C10008CBD6E /* 5.jpg */,
 				0CFCE1391E53273D00E8DE0E /* FSCalendar */,
 				0CFCE1361E53100A00E8DE0E /* bike.jpg */,
 				0CB526D61E4F03D600422BDC /* Arrow.png */,
@@ -231,6 +242,10 @@
 				0CFCE16C1E53279800E8DE0E /* HotelApp-Bridging-Header.h */,
 				0CFCE16D1E53297700E8DE0E /* CalenderVC.swift */,
 				0CFCE16E1E53297700E8DE0E /* CalenderVC.xib */,
+				0C5F84C41E54266A0055E4AD /* RestaurantVC.swift */,
+				0C5F84C51E54266A0055E4AD /* RestaurantVC.xib */,
+				0C90D4741E5430A8008CBD6E /* RestuarantCell.swift */,
+				0C90D4751E5430A8008CBD6E /* RestuarantCell.xib */,
 			);
 			path = HotelApp;
 			sourceTree = "<group>";
@@ -296,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CFCE16B1E53273D00E8DE0E /* Info.plist in Resources */,
+				0C90D4791E544C10008CBD6E /* 5.jpg in Resources */,
 				0CFCE1701E53297700E8DE0E /* CalenderVC.xib in Resources */,
 				0CFDAA421E4C96C20020FCEB /* LaunchScreen.storyboard in Resources */,
 				0CFCE1371E53100A00E8DE0E /* bike.jpg in Resources */,
@@ -303,11 +319,13 @@
 				0CFDAA3F1E4C96C20020FCEB /* Assets.xcassets in Resources */,
 				0CB526D51E4F00D700422BDC /* star.png in Resources */,
 				0CFDAA4C1E4C96DC0020FCEB /* SignInVC.xib in Resources */,
+				0C90D4771E5430A8008CBD6E /* RestuarantCell.xib in Resources */,
 				0CFCE1311E52FF4600E8DE0E /* AutoresizeCellVC.xib in Resources */,
 				0CB526DF1E4F422300422BDC /* AutoSizeCell.xib in Resources */,
 				0CD3D3D81E4D9BBD0028BEE5 /* MapVC.xib in Resources */,
 				0CB526D71E4F03D600422BDC /* Arrow.png in Resources */,
 				0CB526CF1E4EFDD700422BDC /* WeekViewController.xib in Resources */,
+				0C5F84C71E54266A0055E4AD /* RestaurantVC.xib in Resources */,
 				0C8C61941E4EEBDC0016DDD2 /* location.png in Resources */,
 				0CFCE1351E530FA600E8DE0E /* ZoomImageVC.xib in Resources */,
 				0CB526D31E4F002100422BDC /* WeeklyDataCell.xib in Resources */,
@@ -324,11 +342,13 @@
 			files = (
 				0CB526CE1E4EFDD700422BDC /* WeekViewController.swift in Sources */,
 				0CFCE1341E530FA600E8DE0E /* ZoomImageVC.swift in Sources */,
+				0C90D4761E5430A8008CBD6E /* RestuarantCell.swift in Sources */,
 				0CFCE15C1E53273D00E8DE0E /* FSCalendar.m in Sources */,
 				0CFCE1651E53273D00E8DE0E /* FSCalendarExtensions.m in Sources */,
 				0CB526DE1E4F422300422BDC /* AutoSizeCell.swift in Sources */,
 				0CFCE15B1E53273D00E8DE0E /* FSCalendar+Deprecated.m in Sources */,
 				0CFCE16A1E53273D00E8DE0E /* FSCalendarWeekdayView.m in Sources */,
+				0C5F84C61E54266A0055E4AD /* RestaurantVC.swift in Sources */,
 				0CFCE1631E53273D00E8DE0E /* FSCalendarDelegationFactory.m in Sources */,
 				0CFCE1611E53273D00E8DE0E /* FSCalendarCollectionViewLayout.m in Sources */,
 				0CFCE15D1E53273D00E8DE0E /* FSCalendarAppearance.m in Sources */,
