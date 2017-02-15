@@ -175,7 +175,7 @@
                 <outlet property="lblTitle1" destination="Ilq-M3-XCz" id="BIL-VB-cki"/>
                 <outlet property="lblTitle2" destination="vS4-Kk-xkB" id="18I-JX-9eE"/>
             </connections>
-            <point key="canvasLocation" x="-364" y="-21.5"/>
+            <point key="canvasLocation" x="-275" y="-160"/>
         </tableViewCell>
     </objects>
     <resources>

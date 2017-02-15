@@ -21,6 +21,10 @@ class ProgressVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.img.isHidden = true
+        self.imgAnimation.isHidden = true
+        
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.setProgress), userInfo: nil, repeats: true)
         imgAnimation.layer.cornerRadius = imgAnimation.frame.width/2
         imgAnimation.clipsToBounds = true
