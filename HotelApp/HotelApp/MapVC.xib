@@ -14,7 +14,7 @@
                 <outlet property="btnAction" destination="y15-PU-Q7H" id="PCi-OW-Vam"/>
                 <outlet property="btnNavLeft" destination="K86-OA-d5n" id="fju-xj-acL"/>
                 <outlet property="btnUserLocation" destination="hme-3n-Rc6" id="G0b-XG-Kam"/>
-                <outlet property="map" destination="7nc-BB-ZHV" id="DnN-Bw-4a3"/>
+                <outlet property="mapView" destination="7nc-BB-ZHV" id="OBq-y7-zY0"/>
                 <outlet property="txtSearchbar" destination="b7E-Lj-7rS" id="PXy-8G-wrg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -61,7 +61,11 @@
                         <constraint firstAttribute="height" constant="44" id="Gvh-jn-da1"/>
                     </constraints>
                     <items>
-                        <barButtonItem title="Item" id="cGI-7I-P5O"/>
+                        <barButtonItem title="Type" id="cGI-7I-P5O">
+                            <connections>
+                                <action selector="btnMapType:" destination="-1" id="MYg-su-Hpe"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="cCg-nF-WF7"/>
                         <barButtonItem title="Item" id="KL2-Z6-D6q"/>
                     </items>

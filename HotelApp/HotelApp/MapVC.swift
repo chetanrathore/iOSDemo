@@ -17,7 +17,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIS
     @IBOutlet var btnAction: UIButton!
     
     @IBOutlet var txtSearchbar: UISearchBar!
-    @IBOutlet var map: MKMapView!
+    @IBOutlet var mapView: MKMapView!
     @IBOutlet var btnUserLocation: UIButton!
     
     var searchController:UISearchController!
@@ -35,7 +35,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIS
         super.viewDidLoad()
         txtSearchbar.delegate = self
         //        showSearchBar()
-        mapkit()
+        self.setMapView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,7 +55,9 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIS
         btnUserLocation.clipsToBounds = true
     }
     
-    func mapkit() {
+    func setMapView() {
+        
+        self.mapView.showsUserLocation = true
         if (CLLocationManager.locationServicesEnabled()) {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -64,52 +66,98 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIS
             locationManager.requestAlwaysAuthorization()
             locationManager.startMonitoringSignificantLocationChanges()
             locationManager.startUpdatingLocation()
+            mapView.showsUserLocation = true
+            mapView.mapType = .standard
             
         } else {
             print("Location services are not enabled");
         }
+        mapView.delegate = self
         
-        map.delegate = self
-        map.mapType = .standard
-        map.showsUserLocation = true
-        let status = CLLocationManager.authorizationStatus()
+        //Set all anotations here accept user location
+        //Span for zoom map or clear map path
+        var span = MKCoordinateSpan()
+        span.latitudeDelta = 0.8
+        span.longitudeDelta = 0.8
         
-        switch status {
-        case .authorizedAlways, .authorizedWhenInUse:
-            return
-            
-        case .denied, .restricted:
-            print("location access denied")
-            
-        default:
-            locationManager.requestWhenInUseAuthorization()
-        }
+        let coordinate1 = CLLocationCoordinate2DMake(28.889281, 75.836042)
+        let mapRegion1 = MKCoordinateRegion(center: coordinate1, span: span)
+        mapView.setRegion(mapRegion1, animated: true)
+        //Create a pin annotation
+        let pointAnnotation1 = CustomPointAnnotation()
+        pointAnnotation1.coordinate = coordinate1
+        pointAnnotation1.title = "MARK1"
+        pointAnnotation1.subtitle = "here"
+        let pinAnnotationView1 = MKPinAnnotationView(annotation: pointAnnotation1, reuseIdentifier: "care")
+        mapView.setRegion(mapRegion1, animated: true)
+        mapView.addAnnotation(pinAnnotationView1.annotation!)
+        
+        let coordinate = CLLocationCoordinate2DMake(30.889281, 75.836042)
+        let mapRegion = MKCoordinateRegion(center: coordinate, span: span)
+        mapView.setRegion(mapRegion, animated: true)
+        let pointAnnotation2 = CustomPointAnnotation()
+        pointAnnotation2.coordinate = coordinate
+        pointAnnotation2.title = "Location2"
+        pointAnnotation2.subtitle = "here"
+        let pinAnnotationView2 = MKPinAnnotationView(annotation: pointAnnotation2, reuseIdentifier: "care")
+        mapView.addAnnotation(pinAnnotationView2.annotation!)
+        
     }
     
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        locationManager.stopUpdatingLocation()
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if annotation is MKUserLocation {
+            return nil
+        }
+        if annotation is CustomPointAnnotation {
+            let identifier = "pin"
+            var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            if pinView == nil {
+                //Create a plain MKAnnotationView if using a custom image...
+                pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                pinView!.canShowCallout = true
+                pinView?.image = UIImage(named: "Marker.png")
+                let guester = UITapGestureRecognizer(target: self, action: #selector(self.tapPinInMap))
+                //Here set Id of care service
+                pinView?.tag = 2
+                pinView?.gestureRecognizers = [guester]
+            }
+            else {
+                //Update the annotation reference if re-using a view...
+                pinView?.annotation = annotation
+            }
+            return pinView
+        }
+        return nil
     }
-    //
-    //    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-    //        return MKAnnotationView()
-    //    }
+    
+    //Which pin is selected
+    func tapPinInMap(sender: UITapGestureRecognizer) {
+        let selectedPin = (sender.view)!.tag
+        print(selectedPin)
+        
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        locationManager.stopUpdatingLocation()
+        print("ERROR:\(error)")
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.last! as CLLocation
-        if self.map.userLocation.coordinate.latitude != location.coordinate.latitude ||
-            self.map.userLocation.coordinate.longitude != location.coordinate.longitude {
-            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.08, longitudeDelta: 0.08))
-            
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = center
-            annotation.title = "My location"
-            
-            self.map.setRegion(region, animated: true)
-            self.map.addAnnotation(annotation)
-        }
-        self.locationManager.stopUpdatingLocation()
+        let locationArray = locations as NSArray
+        let locationObj = locationArray.lastObject as! CLLocation
+        let coord = locationObj.coordinate
+        let pointAnnotation = MKPointAnnotation()
+        pointAnnotation.coordinate = coord
+        mapView.addAnnotation(pointAnnotation)
+        
+        print("longitude:\(coord.longitude)")
+        print("latitude:\(coord.latitude)")
+        
+        // locationManager.stopUpdatingLocation()
     }
+    
     
     func mapView(_ mapView: MKMapView, didAdd renderers: [MKOverlayRenderer]) {
         
@@ -130,9 +178,9 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIS
         //1
         searchBar.resignFirstResponder()
         // dismiss(animated: true, completion: nil)
-        if self.map.annotations.count != 0{
-            annotation = self.map.annotations[0]
-            self.map.removeAnnotation(annotation)
+        if self.mapView.annotations.count != 0{
+            annotation = self.mapView.annotations[0]
+            self.mapView.removeAnnotation(annotation)
         }
         //2
         localSearchRequest = MKLocalSearchRequest()
@@ -153,10 +201,24 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIS
             self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: localSearchResponse!.boundingRegion.center.latitude, longitude: localSearchResponse!.boundingRegion.center.longitude)
             
             self.pinAnnotationView = MKPinAnnotationView(annotation: self.pointAnnotation, reuseIdentifier: nil)
-            self.map.centerCoordinate = self.pointAnnotation.coordinate
-            self.map.addAnnotation(self.pinAnnotationView.annotation!)
+            self.mapView.centerCoordinate = self.pointAnnotation.coordinate
+            self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
             self.locationManager.startUpdatingLocation()
         }
     }
     
+    
+    @IBAction func btnMapType(_ sender: Any) {
+        if mapView.mapType == .standard {
+            self.mapView.mapType = .satellite
+        }else{
+            self.mapView.mapType = .standard
+        }
+    }
+    
 }
+
+class CustomPointAnnotation: MKPointAnnotation {
+    var pinCustomImageName:String!
+}
+
