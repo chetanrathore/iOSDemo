@@ -7,8 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5D6E991E557B3A005B2A97 /* MapKitLocationSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5D6E971E557B3A005B2A97 /* MapKitLocationSearchVC.swift */; };
+		0C5D6E9A1E557B3A005B2A97 /* MapKitLocationSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5D6E981E557B3A005B2A97 /* MapKitLocationSearchVC.xib */; };
+		0C5D6EA11E55825B005B2A97 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5D6E9F1E55825B005B2A97 /* LocationSearchTable.swift */; };
+		0C5D6EA21E55825B005B2A97 /* LocationSearchTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5D6EA01E55825B005B2A97 /* LocationSearchTable.xib */; };
+		0C5D6EA51E55B63B005B2A97 /* MapRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5D6EA31E55B63B005B2A97 /* MapRouteViewController.swift */; };
+		0C5D6EA61E55B63B005B2A97 /* MapRouteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5D6EA41E55B63B005B2A97 /* MapRouteViewController.xib */; };
+		0C5F84C61E54266A0055E4AD /* RestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F84C41E54266A0055E4AD /* RestaurantVC.swift */; };
+		0C5F84C71E54266A0055E4AD /* RestaurantVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5F84C51E54266A0055E4AD /* RestaurantVC.xib */; };
+		0C6A88261E55CA870028C660 /* GoogleMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A88241E55CA870028C660 /* GoogleMapVC.swift */; };
+		0C6A88271E55CA870028C660 /* GoogleMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6A88251E55CA870028C660 /* GoogleMapVC.xib */; };
 		0C8C61921E4EDEF90016DDD2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C8C61911E4EDEF90016DDD2 /* MapKit.framework */; };
 		0C8C61941E4EEBDC0016DDD2 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8C61931E4EEBDC0016DDD2 /* location.png */; };
+		0C90D4761E5430A8008CBD6E /* RestuarantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90D4741E5430A8008CBD6E /* RestuarantCell.swift */; };
+		0C90D4771E5430A8008CBD6E /* RestuarantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C90D4751E5430A8008CBD6E /* RestuarantCell.xib */; };
+		0C90D47D1E54518B008CBD6E /* 5b667243-33a8-42fb-925b-38b9580285efback.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C90D47A1E54518B008CBD6E /* 5b667243-33a8-42fb-925b-38b9580285efback.jpg */; };
+		0C90D4891E5491BC008CBD6E /* Marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C90D4881E5491BC008CBD6E /* Marker.png */; };
 		0CB526CE1E4EFDD700422BDC /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB526CC1E4EFDD700422BDC /* WeekViewController.swift */; };
 		0CB526CF1E4EFDD700422BDC /* WeekViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB526CD1E4EFDD700422BDC /* WeekViewController.xib */; };
 		0CB526D21E4F002100422BDC /* WeeklyDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB526D01E4F002100422BDC /* WeeklyDataCell.swift */; };
@@ -52,11 +66,26 @@
 		0CFDAA421E4C96C20020FCEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CFDAA401E4C96C20020FCEB /* LaunchScreen.storyboard */; };
 		0CFDAA4B1E4C96DC0020FCEB /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFDAA491E4C96DC0020FCEB /* SignInVC.swift */; };
 		0CFDAA4C1E4C96DC0020FCEB /* SignInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CFDAA4A1E4C96DC0020FCEB /* SignInVC.xib */; };
+		C760520913104991979C0AA1 /* Pods_HotelApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109E9824180A5868A4F33F7 /* Pods_HotelApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C5D6E971E557B3A005B2A97 /* MapKitLocationSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitLocationSearchVC.swift; sourceTree = "<group>"; };
+		0C5D6E981E557B3A005B2A97 /* MapKitLocationSearchVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapKitLocationSearchVC.xib; sourceTree = "<group>"; };
+		0C5D6E9F1E55825B005B2A97 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		0C5D6EA01E55825B005B2A97 /* LocationSearchTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationSearchTable.xib; sourceTree = "<group>"; };
+		0C5D6EA31E55B63B005B2A97 /* MapRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapRouteViewController.swift; sourceTree = "<group>"; };
+		0C5D6EA41E55B63B005B2A97 /* MapRouteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapRouteViewController.xib; sourceTree = "<group>"; };
+		0C5F84C41E54266A0055E4AD /* RestaurantVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantVC.swift; sourceTree = "<group>"; };
+		0C5F84C51E54266A0055E4AD /* RestaurantVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantVC.xib; sourceTree = "<group>"; };
+		0C6A88241E55CA870028C660 /* GoogleMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapVC.swift; sourceTree = "<group>"; };
+		0C6A88251E55CA870028C660 /* GoogleMapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoogleMapVC.xib; sourceTree = "<group>"; };
 		0C8C61911E4EDEF90016DDD2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0C8C61931E4EEBDC0016DDD2 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		0C90D4741E5430A8008CBD6E /* RestuarantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestuarantCell.swift; sourceTree = "<group>"; };
+		0C90D4751E5430A8008CBD6E /* RestuarantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestuarantCell.xib; sourceTree = "<group>"; };
+		0C90D47A1E54518B008CBD6E /* 5b667243-33a8-42fb-925b-38b9580285efback.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "5b667243-33a8-42fb-925b-38b9580285efback.jpg"; sourceTree = "<group>"; };
+		0C90D4881E5491BC008CBD6E /* Marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marker.png; sourceTree = "<group>"; };
 		0CB526CC1E4EFDD700422BDC /* WeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
 		0CB526CD1E4EFDD700422BDC /* WeekViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekViewController.xib; sourceTree = "<group>"; };
 		0CB526D01E4F002100422BDC /* WeeklyDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyDataCell.swift; sourceTree = "<group>"; };
@@ -119,6 +148,9 @@
 		0CFDAA431E4C96C20020FCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CFDAA491E4C96DC0020FCEB /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		0CFDAA4A1E4C96DC0020FCEB /* SignInVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInVC.xib; sourceTree = "<group>"; };
+		8A548BA677DF8CD40A3D7ADE /* Pods-HotelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotelApp/Pods-HotelApp.release.xcconfig"; sourceTree = "<group>"; };
+		B0699FD54A67781407C088C1 /* Pods-HotelApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotelApp/Pods-HotelApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B109E9824180A5868A4F33F7 /* Pods_HotelApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotelApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,16 +159,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C8C61921E4EDEF90016DDD2 /* MapKit.framework in Frameworks */,
+				C760520913104991979C0AA1 /* Pods_HotelApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C6A88201E55C9150028C660 /* mapkitdemo */ = {
+			isa = PBXGroup;
+			children = (
+				0CD3D3D51E4D9BBD0028BEE5 /* MapVC.swift */,
+				0CD3D3D61E4D9BBD0028BEE5 /* MapVC.xib */,
+				0C5D6E971E557B3A005B2A97 /* MapKitLocationSearchVC.swift */,
+				0C5D6E981E557B3A005B2A97 /* MapKitLocationSearchVC.xib */,
+				0C5D6E9F1E55825B005B2A97 /* LocationSearchTable.swift */,
+				0C5D6EA01E55825B005B2A97 /* LocationSearchTable.xib */,
+				0C5D6EA31E55B63B005B2A97 /* MapRouteViewController.swift */,
+				0C5D6EA41E55B63B005B2A97 /* MapRouteViewController.xib */,
+			);
+			name = mapkitdemo;
+			sourceTree = "<group>";
+		};
+		0C6A88211E55C92C0028C660 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0C90D4881E5491BC008CBD6E /* Marker.png */,
+				0C90D47A1E54518B008CBD6E /* 5b667243-33a8-42fb-925b-38b9580285efback.jpg */,
+				0CFCE1361E53100A00E8DE0E /* bike.jpg */,
+				0CB526D61E4F03D600422BDC /* Arrow.png */,
+				0CB526D41E4F00D700422BDC /* star.png */,
+				0C8C61931E4EEBDC0016DDD2 /* location.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		0C6A88221E55C94F0028C660 /* restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				0CB526CC1E4EFDD700422BDC /* WeekViewController.swift */,
+				0CB526CD1E4EFDD700422BDC /* WeekViewController.xib */,
+				0CB526D01E4F002100422BDC /* WeeklyDataCell.swift */,
+				0CB526D11E4F002100422BDC /* WeeklyDataCell.xib */,
+				0CFCE16D1E53297700E8DE0E /* CalenderVC.swift */,
+				0CFCE16E1E53297700E8DE0E /* CalenderVC.xib */,
+				0C5F84C41E54266A0055E4AD /* RestaurantVC.swift */,
+				0C5F84C51E54266A0055E4AD /* RestaurantVC.xib */,
+				0C90D4741E5430A8008CBD6E /* RestuarantCell.swift */,
+				0C90D4751E5430A8008CBD6E /* RestuarantCell.xib */,
+			);
+			name = restaurant;
+			sourceTree = "<group>";
+		};
+		0C6A88231E55C9670028C660 /* googlemap */ = {
+			isa = PBXGroup;
+			children = (
+				0C6A88241E55CA870028C660 /* GoogleMapVC.swift */,
+				0C6A88251E55CA870028C660 /* GoogleMapVC.xib */,
+			);
+			name = googlemap;
+			sourceTree = "<group>";
+		};
 		0C8C61901E4EDEF80016DDD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				0C8C61911E4EDEF90016DDD2 /* MapKit.framework */,
+				B109E9824180A5868A4F33F7 /* Pods_HotelApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,6 +275,7 @@
 				0CFDAA361E4C96C20020FCEB /* HotelApp */,
 				0CFDAA351E4C96C20020FCEB /* Products */,
 				0C8C61901E4EDEF80016DDD2 /* Frameworks */,
+				90A74F878D38A656E9CAB110 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,11 +290,9 @@
 		0CFDAA361E4C96C20020FCEB /* HotelApp */ = {
 			isa = PBXGroup;
 			children = (
+				0C6A88231E55C9670028C660 /* googlemap */,
+				0C6A88211E55C92C0028C660 /* images */,
 				0CFCE1391E53273D00E8DE0E /* FSCalendar */,
-				0CFCE1361E53100A00E8DE0E /* bike.jpg */,
-				0CB526D61E4F03D600422BDC /* Arrow.png */,
-				0CB526D41E4F00D700422BDC /* star.png */,
-				0C8C61931E4EEBDC0016DDD2 /* location.png */,
 				0CFDAA371E4C96C20020FCEB /* AppDelegate.swift */,
 				0CFDAA391E4C96C20020FCEB /* ViewController.swift */,
 				0CFDAA3B1E4C96C20020FCEB /* Main.storyboard */,
@@ -214,12 +301,8 @@
 				0CFDAA431E4C96C20020FCEB /* Info.plist */,
 				0CFDAA491E4C96DC0020FCEB /* SignInVC.swift */,
 				0CFDAA4A1E4C96DC0020FCEB /* SignInVC.xib */,
-				0CD3D3D51E4D9BBD0028BEE5 /* MapVC.swift */,
-				0CD3D3D61E4D9BBD0028BEE5 /* MapVC.xib */,
-				0CB526CC1E4EFDD700422BDC /* WeekViewController.swift */,
-				0CB526CD1E4EFDD700422BDC /* WeekViewController.xib */,
-				0CB526D01E4F002100422BDC /* WeeklyDataCell.swift */,
-				0CB526D11E4F002100422BDC /* WeeklyDataCell.xib */,
+				0C6A88201E55C9150028C660 /* mapkitdemo */,
+				0C6A88221E55C94F0028C660 /* restaurant */,
 				0CB526D81E4F285900422BDC /* ProgressVC.swift */,
 				0CB526D91E4F285900422BDC /* ProgressVC.xib */,
 				0CB526DC1E4F422300422BDC /* AutoSizeCell.swift */,
@@ -229,10 +312,17 @@
 				0CFCE1321E530FA600E8DE0E /* ZoomImageVC.swift */,
 				0CFCE1331E530FA600E8DE0E /* ZoomImageVC.xib */,
 				0CFCE16C1E53279800E8DE0E /* HotelApp-Bridging-Header.h */,
-				0CFCE16D1E53297700E8DE0E /* CalenderVC.swift */,
-				0CFCE16E1E53297700E8DE0E /* CalenderVC.xib */,
 			);
 			path = HotelApp;
+			sourceTree = "<group>";
+		};
+		90A74F878D38A656E9CAB110 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0699FD54A67781407C088C1 /* Pods-HotelApp.debug.xcconfig */,
+				8A548BA677DF8CD40A3D7ADE /* Pods-HotelApp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,9 +332,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CFDAA461E4C96C20020FCEB /* Build configuration list for PBXNativeTarget "HotelApp" */;
 			buildPhases = (
+				57DABFE140D7DFDB957DF4C7 /* [CP] Check Pods Manifest.lock */,
 				0CFDAA301E4C96C20020FCEB /* Sources */,
 				0CFDAA311E4C96C20020FCEB /* Frameworks */,
 				0CFDAA321E4C96C20020FCEB /* Resources */,
+				15F6E6AA2FD0A423EEED8A5F /* [CP] Embed Pods Frameworks */,
+				A870B975B7CA3C1914FF4371 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,8 +360,9 @@
 				TargetAttributes = {
 					0CFDAA331E4C96C20020FCEB = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y55EBSG532;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -296,6 +390,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CFCE16B1E53273D00E8DE0E /* Info.plist in Resources */,
+				0C5D6EA21E55825B005B2A97 /* LocationSearchTable.xib in Resources */,
+				0C5D6E9A1E557B3A005B2A97 /* MapKitLocationSearchVC.xib in Resources */,
 				0CFCE1701E53297700E8DE0E /* CalenderVC.xib in Resources */,
 				0CFDAA421E4C96C20020FCEB /* LaunchScreen.storyboard in Resources */,
 				0CFCE1371E53100A00E8DE0E /* bike.jpg in Resources */,
@@ -303,19 +399,73 @@
 				0CFDAA3F1E4C96C20020FCEB /* Assets.xcassets in Resources */,
 				0CB526D51E4F00D700422BDC /* star.png in Resources */,
 				0CFDAA4C1E4C96DC0020FCEB /* SignInVC.xib in Resources */,
+				0C90D4891E5491BC008CBD6E /* Marker.png in Resources */,
+				0C90D47D1E54518B008CBD6E /* 5b667243-33a8-42fb-925b-38b9580285efback.jpg in Resources */,
+				0C90D4771E5430A8008CBD6E /* RestuarantCell.xib in Resources */,
 				0CFCE1311E52FF4600E8DE0E /* AutoresizeCellVC.xib in Resources */,
 				0CB526DF1E4F422300422BDC /* AutoSizeCell.xib in Resources */,
 				0CD3D3D81E4D9BBD0028BEE5 /* MapVC.xib in Resources */,
 				0CB526D71E4F03D600422BDC /* Arrow.png in Resources */,
 				0CB526CF1E4EFDD700422BDC /* WeekViewController.xib in Resources */,
+				0C5F84C71E54266A0055E4AD /* RestaurantVC.xib in Resources */,
+				0C6A88271E55CA870028C660 /* GoogleMapVC.xib in Resources */,
 				0C8C61941E4EEBDC0016DDD2 /* location.png in Resources */,
 				0CFCE1351E530FA600E8DE0E /* ZoomImageVC.xib in Resources */,
 				0CB526D31E4F002100422BDC /* WeeklyDataCell.xib in Resources */,
 				0CFDAA3D1E4C96C20020FCEB /* Main.storyboard in Resources */,
+				0C5D6EA61E55B63B005B2A97 /* MapRouteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15F6E6AA2FD0A423EEED8A5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelApp/Pods-HotelApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57DABFE140D7DFDB957DF4C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A870B975B7CA3C1914FF4371 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotelApp/Pods-HotelApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0CFDAA301E4C96C20020FCEB /* Sources */ = {
@@ -324,21 +474,26 @@
 			files = (
 				0CB526CE1E4EFDD700422BDC /* WeekViewController.swift in Sources */,
 				0CFCE1341E530FA600E8DE0E /* ZoomImageVC.swift in Sources */,
+				0C90D4761E5430A8008CBD6E /* RestuarantCell.swift in Sources */,
+				0C5D6EA51E55B63B005B2A97 /* MapRouteViewController.swift in Sources */,
 				0CFCE15C1E53273D00E8DE0E /* FSCalendar.m in Sources */,
 				0CFCE1651E53273D00E8DE0E /* FSCalendarExtensions.m in Sources */,
 				0CB526DE1E4F422300422BDC /* AutoSizeCell.swift in Sources */,
 				0CFCE15B1E53273D00E8DE0E /* FSCalendar+Deprecated.m in Sources */,
 				0CFCE16A1E53273D00E8DE0E /* FSCalendarWeekdayView.m in Sources */,
+				0C5F84C61E54266A0055E4AD /* RestaurantVC.swift in Sources */,
 				0CFCE1631E53273D00E8DE0E /* FSCalendarDelegationFactory.m in Sources */,
 				0CFCE1611E53273D00E8DE0E /* FSCalendarCollectionViewLayout.m in Sources */,
 				0CFCE15D1E53273D00E8DE0E /* FSCalendarAppearance.m in Sources */,
 				0CFCE15E1E53273D00E8DE0E /* FSCalendarCalculator.m in Sources */,
+				0C6A88261E55CA870028C660 /* GoogleMapVC.swift in Sources */,
 				0CFDAA3A1E4C96C20020FCEB /* ViewController.swift in Sources */,
 				0CFCE1691E53273D00E8DE0E /* FSCalendarTransitionCoordinator.m in Sources */,
 				0CD3D3D71E4D9BBD0028BEE5 /* MapVC.swift in Sources */,
 				0CFCE1641E53273D00E8DE0E /* FSCalendarDelegationProxy.m in Sources */,
 				0CFCE1621E53273D00E8DE0E /* FSCalendarConstants.m in Sources */,
 				0CFCE15F1E53273D00E8DE0E /* FSCalendarCell.m in Sources */,
+				0C5D6E991E557B3A005B2A97 /* MapKitLocationSearchVC.swift in Sources */,
 				0CFDAA381E4C96C20020FCEB /* AppDelegate.swift in Sources */,
 				0CB526D21E4F002100422BDC /* WeeklyDataCell.swift in Sources */,
 				0CB526DA1E4F285900422BDC /* ProgressVC.swift in Sources */,
@@ -347,6 +502,7 @@
 				0CFCE1301E52FF4600E8DE0E /* AutoresizeCellVC.swift in Sources */,
 				0CFCE1671E53273D00E8DE0E /* FSCalendarScopeHandle.m in Sources */,
 				0CFCE1681E53273D00E8DE0E /* FSCalendarStickyHeader.m in Sources */,
+				0C5D6EA11E55825B005B2A97 /* LocationSearchTable.swift in Sources */,
 				0CFCE16F1E53297700E8DE0E /* CalenderVC.swift in Sources */,
 				0CFCE1601E53273D00E8DE0E /* FSCalendarCollectionView.m in Sources */,
 			);
@@ -395,6 +551,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -414,7 +571,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -445,6 +602,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -458,7 +616,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -469,13 +627,18 @@
 		};
 		0CFDAA471E4C96C20020FCEB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0699FD54A67781407C088C1 /* Pods-HotelApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = HotelApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.HotelApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
+				PROVISIONING_PROFILE_SPECIFIER = Snaptouch_Development;
 				SWIFT_OBJC_BRIDGING_HEADER = "HotelApp/HotelApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -484,13 +647,18 @@
 		};
 		0CFDAA481E4C96C20020FCEB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A548BA677DF8CD40A3D7ADE /* Pods-HotelApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = HotelApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.HotelApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
+				PROVISIONING_PROFILE_SPECIFIER = Snaptouch_Development;
 				SWIFT_OBJC_BRIDGING_HEADER = "HotelApp/HotelApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

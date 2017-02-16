@@ -36,7 +36,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let objCategory = self.categories[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as! CategoryViewCell
-        cell.imgCategory.imageFromServerURL(urlString: baseUrl+objCategory.categoryImage!, setImageColor: false)
+        cell.imgCategory.imageFromServerURL(urlString: baseUrl+"category/"+objCategory.categoryImage!, setImageColor: false)
         cell.lblCategoryName.text = objCategory.categoryName
         cell.lblDescription.text = objCategory.description
         return cell

@@ -105,4 +105,11 @@ class CalenderVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource, FS
         }
         return UIColor.black
     }
+    
+    @IBAction func btnClick(_ sender: Any) {
+        let vc = RestaurantVC(nibName: "RestaurantVC", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
 }
