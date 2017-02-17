@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        GMSServices.provideAPIKey("AIzaSyANUFh0VnBRoSpXBjDJN9VfpTs92OBIsXE")
-        GMSPlacesClient.provideAPIKey("AIzaSyANUFh0VnBRoSpXBjDJN9VfpTs92OBIsXE")
+        GMSServices.provideAPIKey("AIzaSyCwnZjVMIvsZS0UJf98LqCdNArrr3uBpng")
+        GMSPlacesClient.provideAPIKey("AIzaSyCwnZjVMIvsZS0UJf98LqCdNArrr3uBpng")
         
         // Override point for customization after application launch.
         let signInVC = GoogleMapVC(nibName: "GoogleMapVC", bundle: nil)
