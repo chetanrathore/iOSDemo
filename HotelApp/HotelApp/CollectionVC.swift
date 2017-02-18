@@ -46,7 +46,7 @@ class CollectionVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         mydata.append(MyData(orderIndex: 3, data: "str4"))
         mydata.append(MyData(orderIndex: 4, data: "str5"))
         mydata.append(MyData(orderIndex: 5, data: "str6"))
-        
+       
     }
     
     override func didReceiveMemoryWarning() {
