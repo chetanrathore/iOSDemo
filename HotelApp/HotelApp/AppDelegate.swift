@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSPlacesClient.provideAPIKey("AIzaSyCwnZjVMIvsZS0UJf98LqCdNArrr3uBpng")
         
         // Override point for customization after application launch.
-        let signInVC = GoogleMapVC(nibName: "GoogleMapVC", bundle: nil)
+        let signInVC = CollectionVC(nibName: "CollectionVC", bundle: nil)
         let navigationVC = UINavigationController(rootViewController: signInVC)
         window?.rootViewController = navigationVC
         
