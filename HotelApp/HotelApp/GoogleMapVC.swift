@@ -11,9 +11,9 @@ import GoogleMaps
 
 class GoogleMapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate {
     
-    //    @IBOutlet var map: GMSMapView!
     @IBOutlet var searchbar: UISearchBar!
     
+    @IBOutlet var segmentMapType: UISegmentedControl!
     @IBOutlet var mapVIew: GMSMapView!
     let infoMarker = GMSMarker()
     
@@ -31,8 +31,21 @@ class GoogleMapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelega
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
+        mapVIew.settings.myLocationButton = true
+        mapVIew.isMyLocationEnabled = true
         searchbar.delegate = self
         mapVIew.delegate = self
+        
+        if CLLocationManager.locationServicesEnabled() {
+            switch(CLLocationManager.authorizationStatus()) {
+            case .notDetermined, .restricted, .denied:
+                print("No access")
+            case .authorizedAlways, .authorizedWhenInUse:
+                print("Access")
+            }
+        } else {
+            print("Location services are not enabled")
+        }
         
     }
     
@@ -51,14 +64,14 @@ class GoogleMapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelega
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let newLocation = locations.last
-        mapVIew.camera = GMSCameraPosition.camera(withTarget: newLocation!.coordinate, zoom: 15.0)
-        mapVIew.settings.myLocationButton = true
-        infoMarker.position = CLLocationCoordinate2DMake(newLocation!.coordinate.latitude, newLocation!.coordinate.longitude)
-        infoMarker.map = self.mapVIew
-        locationManager.stopUpdatingLocation()
-        sendRequest()
-        
+        if mapVIew.myLocation?.coordinate.latitude != locations.last?.coordinate.latitude ||
+            mapVIew.myLocation?.coordinate.longitude != locations.last?.coordinate.longitude {
+            let newLocation = locations.last
+            mapVIew.camera = GMSCameraPosition.camera(withTarget: newLocation!.coordinate, zoom: 15.0)
+            infoMarker.position = CLLocationCoordinate2DMake(newLocation!.coordinate.latitude, newLocation!.coordinate.longitude)
+            infoMarker.map = self.mapVIew
+        }
+        mapVIew.bringSubview(toFront: segmentMapType)
     }
     
     func reverseGeocodeCoordinate(coordinate: CLLocationCoordinate2D) {
@@ -91,54 +104,100 @@ class GoogleMapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelega
     
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        if !(searchBar.text?.isEmpty)! {
+            let str = searchBar.text?.trimmingCharacters(in: .whitespaces)
+            sendRequest(str: str!)
+        }
     }
     
-    func searchPlace() {
+    func sendRequest(str: String) {
         
-    }
-    
-    func sendRequest() {
         if locationManager.location != nil{
             let location = (locationManager.location?.coordinate)!
-            let str = "https://maps.googleapis.com/maps/api/place/search/json?location=\(location.latitude),\(location.longitude)&radius=500&types=cafe&sensor=true&key=AIzaSyCwnZjVMIvsZS0UJf98LqCdNArrr3uBpng"
+            let str = "https://maps.googleapis.com/maps/api/place/search/json?location=\(location.latitude),\(location.longitude)&radius=500&types=\(str)&sensor=true&key=AIzaSyCwnZjVMIvsZS0UJf98LqCdNArrr3uBpng"
             
-            //        var request = URLRequest(url: URL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&key=AIzaSyDaoVxSw3yhiVDFQie_QEhXKYDFUp0li7M")!)
             var request = URLRequest(url: URL(string: str)!)
             request.httpMethod = "GET"
-            
+            //DispatchQueue.main.async {
             URLSession.shared.dataTask(with: request) {data, response, err in
-                //    let data = data as! NSArray
-                let json = try! JSONSerialization.jsonObject(with: data!, options:  JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-                print(json)
-                
-                let result = json.value(forKey: "results") as! NSArray
-                for data in result{
-                    let data = data as AnyObject
-                    let mapPoint = MapPoint()
-                    if let title = data["name"] as? String{
-                        mapPoint.name = title
-                    }
-                    if data["geometry"] != nil{
-                        let geometry = data["geometry"] as AnyObject
-                        let location = geometry["location"] as! NSDictionary
-                        let lat = location.value(forKey: "lat")!
-                        let lng = location.value(forKey: "lng")!
-                        mapPoint.lat = String(describing: lat)
-                        mapPoint.lng = String(describing: lng)
-                    }
-                    if let icon = data["icon"] as? String{
-                        mapPoint.imgIcon = icon
-                    }
-                    if let rating = data["rating"] as? Float{
-                        mapPoint.rating = rating
-                    }
-                    self.mapItem.append(mapPoint)
-                    let coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(mapPoint.lat!)!, longitude: CLLocationDegrees(mapPoint.lng!)!)
-                    let marker = GMSMarker(position: coordinate)
-                    marker.map = self.mapVIew
+                if err != nil {
+                    print("Error:- \(err)")
+                }else{
+                    DispatchQueue.main.async(execute: {
+                        let json = try! JSONSerialization.jsonObject(with: data!, options:  JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+                        print(json)
+                        self.mapItem.removeAll()
+                        let result = json.value(forKey: "results") as! NSArray
+                        for data in result{
+                            let data = data as AnyObject
+                            let mapPoint = MapPoint()
+                            if let title = data["name"] as? String{
+                                mapPoint.name = title
+                            }
+                            if data["geometry"] != nil{
+                                let geometry = data["geometry"] as AnyObject
+                                let location = geometry["location"] as! NSDictionary
+                                mapPoint.lat = location.value(forKey: "lat") as? CLLocationDegrees
+                                mapPoint.lng = location.value(forKey: "lng") as? CLLocationDegrees
+                            }
+                            if let icon = data["icon"] as? String{
+                                mapPoint.imgIcon = icon
+                            }
+                            if let rating = data["rating"] as? Float{
+                                mapPoint.rating = rating
+                            }
+                            self.mapItem.append(mapPoint)
+                        }
+                        self.setPint()
+                    })
                 }
                 }.resume()
+            //    }
+        }
+    }
+    
+    func setPint() {
+        self.mapVIew.clear()
+        let marker = GMSMarker(position: (mapVIew.myLocation?.coordinate)!)
+        marker.title = "My Location"
+        marker.map = self.mapVIew!
+        
+        for map in mapItem{
+            let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: map.lat!, longitude: map.lng!))
+            marker.title = map.name
+            marker.map = self.mapVIew!
+            marker.groundAnchor = CGPoint(x: 0.5, y: 0.5)
+            marker.appearAnimation = kGMSMarkerAnimationPop
+            if let url = URL(string: map.imgIcon!) {
+                getDataFromUrl(url: url) { (data, response, error)  in
+                    guard let data = data, error == nil else { return }
+                    print(response?.suggestedFilename ?? url.lastPathComponent)
+                    print("Download Finished")
+                    DispatchQueue.main.async() { () -> Void in
+                        var img = UIImage(data: data)
+                        img = img?.resizedImage(newSize: CGSize(width: 20, height: 20))
+                        marker.icon = img
+                    }
+                }
+            }
+        }
+    }
+    
+    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            completion(data, response, error)
+            }.resume()
+    }
+    
+    @IBAction func changeMap(_ sender: UISegmentedControl) {
+        switch segmentMapType.selectedSegmentIndex {
+        case 0:
+            self.mapVIew.mapType = kGMSTypeNormal
+        case 1:
+            self.mapVIew.mapType = kGMSTypeSatellite
+        default:
+            break
         }
     }
     
@@ -245,8 +304,8 @@ class GoogleMapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelega
 
 class MapPoint {
     var location: CLLocationCoordinate2D?
-    var lat: String?
-    var lng: String?
+    var lat: CLLocationDegrees?
+    var lng: CLLocationDegrees?
     var imgIcon: String?
     var name: String?
     var id: String?
@@ -292,6 +351,39 @@ extension UIImageView {
         self.image = self.image!.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         self.tintColor = color
     }
+}
+
+
+extension UIImage {
+    
+    /// Returns a image that fills in newSize
+    func resizedImage(newSize: CGSize) -> UIImage {
+        // Guard newSize is different
+        guard self.size != newSize else { return self }
+        
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
+        self.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
+    /// Returns a resized image that fits in rectSize, keeping it's aspect ratio
+    /// Note that the new image size is not rectSize, but within it.
+    func resizedImageWithinRect(rectSize: CGSize) -> UIImage {
+        let widthFactor = size.width / rectSize.width
+        let heightFactor = size.height / rectSize.height
+        
+        var resizeFactor = widthFactor
+        if size.height > size.width {
+            resizeFactor = heightFactor
+        }
+        
+        let newSize = CGSize(width: size.width/resizeFactor, height: size.height/resizeFactor)
+        let resized = resizedImage(newSize: newSize)
+        return resized
+    }
     
 }
+
 
