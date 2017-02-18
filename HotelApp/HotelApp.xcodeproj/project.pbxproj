@@ -33,6 +33,7 @@
 		0CB526DB1E4F285900422BDC /* ProgressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB526D91E4F285900422BDC /* ProgressVC.xib */; };
 		0CB526DE1E4F422300422BDC /* AutoSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB526DC1E4F422300422BDC /* AutoSizeCell.swift */; };
 		0CB526DF1E4F422300422BDC /* AutoSizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB526DD1E4F422300422BDC /* AutoSizeCell.xib */; };
+		0CC130341E57274B00DFDE6F /* Map_Marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CC130331E57274B00DFDE6F /* Map_Marker.png */; };
 		0CD3D3D71E4D9BBD0028BEE5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD3D3D51E4D9BBD0028BEE5 /* MapVC.swift */; };
 		0CD3D3D81E4D9BBD0028BEE5 /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD3D3D61E4D9BBD0028BEE5 /* MapVC.xib */; };
 		0CFCE1301E52FF4600E8DE0E /* AutoresizeCellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFCE12E1E52FF4600E8DE0E /* AutoresizeCellVC.swift */; };
@@ -96,6 +97,7 @@
 		0CB526D91E4F285900422BDC /* ProgressVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressVC.xib; sourceTree = "<group>"; };
 		0CB526DC1E4F422300422BDC /* AutoSizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeCell.swift; sourceTree = "<group>"; };
 		0CB526DD1E4F422300422BDC /* AutoSizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoSizeCell.xib; sourceTree = "<group>"; };
+		0CC130331E57274B00DFDE6F /* Map_Marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map_Marker.png; sourceTree = "<group>"; };
 		0CD3D3D51E4D9BBD0028BEE5 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		0CD3D3D61E4D9BBD0028BEE5 /* MapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapVC.xib; sourceTree = "<group>"; };
 		0CFCE12E1E52FF4600E8DE0E /* AutoresizeCellVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoresizeCellVC.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		0C6A88211E55C92C0028C660 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				0CC130331E57274B00DFDE6F /* Map_Marker.png */,
 				0C90D4881E5491BC008CBD6E /* Marker.png */,
 				0C90D47A1E54518B008CBD6E /* 5b667243-33a8-42fb-925b-38b9580285efback.jpg */,
 				0CFCE1361E53100A00E8DE0E /* bike.jpg */,
@@ -214,8 +217,8 @@
 		0C6A88231E55C9670028C660 /* googlemap */ = {
 			isa = PBXGroup;
 			children = (
-				0C6A88241E55CA870028C660 /* GoogleMapVC.swift */,
 				0C6A88251E55CA870028C660 /* GoogleMapVC.xib */,
+				0C6A88241E55CA870028C660 /* GoogleMapVC.swift */,
 			);
 			name = googlemap;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				0C6A88271E55CA870028C660 /* GoogleMapVC.xib in Resources */,
 				0C8C61941E4EEBDC0016DDD2 /* location.png in Resources */,
 				0CFCE1351E530FA600E8DE0E /* ZoomImageVC.xib in Resources */,
+				0CC130341E57274B00DFDE6F /* Map_Marker.png in Resources */,
 				0CB526D31E4F002100422BDC /* WeeklyDataCell.xib in Resources */,
 				0CFDAA3D1E4C96C20020FCEB /* Main.storyboard in Resources */,
 				0C5D6EA61E55B63B005B2A97 /* MapRouteViewController.xib in Resources */,
@@ -635,7 +639,7 @@
 				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = HotelApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quizment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
 				PROVISIONING_PROFILE_SPECIFIER = Snaptouch_Development;
@@ -655,7 +659,7 @@
 				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = HotelApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quizment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
 				PROVISIONING_PROFILE_SPECIFIER = Snaptouch_Development;

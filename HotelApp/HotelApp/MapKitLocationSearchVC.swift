@@ -32,9 +32,7 @@ class MapKitLocationSearchVC: UIViewController, CLLocationManagerDelegate, Handl
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         
-        
         mapView.showsUserLocation = true
-        
         //search here
         let tbl = LocationSearchTable(nibName: "LocationSearchTable", bundle: nil)
         resultSearchController = UISearchController(searchResultsController: tbl)
