@@ -11,13 +11,22 @@ import UIKit
 class TableReorderVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tblData: UITableView!
-    var data = ["One","Two","Three","Four","Five"]
+    var data = ["One","Two","Three","Four","Five","One","Two","Three","Four","Five"]
+    
+    var refresh: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tblData.dataSource = self
         tblData.delegate = self
         self.tblData.isEditing = true
+        
+        self.automaticallyAdjustsScrollViewInsets = false
+        
+        refresh = UIRefreshControl()
+        refresh.attributedTitle = NSAttributedString(string: "Loading")
+        refresh.addTarget(self, action: #selector(self.refreshTbl), for: .valueChanged)
+        tblData.addSubview(refresh)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +34,12 @@ class TableReorderVC: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
 
+    func refreshTbl(_ sender: AnyObject) {
+        //Call api and end refreshing
+        self.tblData.reloadData()
+        refresh.endRefreshing()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -52,5 +67,9 @@ class TableReorderVC: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
         return false
     }
-
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return UITableViewCellEditingStyle.none
+    }
+    
 }
