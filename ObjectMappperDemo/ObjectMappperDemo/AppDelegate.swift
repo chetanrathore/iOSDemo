@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
         application.registerForRemoteNotifications()
-        let vc = LazyloadingVC(nibName: "LazyloadingVC", bundle: nil)
+        let vc = ImageLoadingVC(nibName: "ImageLoadingVC", bundle: nil)
         window?.rootViewController = vc
         return true
     }

@@ -72,3 +72,21 @@ class Company: NSObject, Mappable {
     }
 
 }
+
+class Author: NSObject, Mappable {
+    var authorId: String?
+    var authorName: String?
+    var profile: String?
+    var emailId: String?
+
+    required init?(map: Map) {
+    }
+
+    func mapping(map: Map) {
+        authorId        <- map["_id"]
+        authorName      <- map["fullName"]
+        emailId         <- map["emailId"]
+        profile         <- map["profile"]
+    }
+
+}

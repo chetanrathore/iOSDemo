@@ -16,6 +16,10 @@
 		0C90D4831E54640E008CBD6E /* LazyloadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C90D4811E54640E008CBD6E /* LazyloadingVC.xib */; };
 		0C9A93D41E20B8E80079217A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A93D31E20B8E80079217A /* User.swift */; };
 		0C9A93D61E20CBA00079217A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A93D51E20CBA00079217A /* Product.swift */; };
+		0CAF457C1E5EE348005B1F9F /* ImageLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAF457A1E5EE348005B1F9F /* ImageLoadingVC.swift */; };
+		0CAF457D1E5EE348005B1F9F /* ImageLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF457B1E5EE348005B1F9F /* ImageLoadingVC.xib */; };
+		0CAF45801E5EE3D3005B1F9F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAF457E1E5EE3D3005B1F9F /* ImageCell.swift */; };
+		0CAF45811E5EE3D3005B1F9F /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF457F1E5EE3D3005B1F9F /* ImageCell.xib */; };
 		0CC1FC281E20B2140018CCB7 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1FC271E20B2140018CCB7 /* APIService.swift */; };
 		0CC1FC2A1E20B2330018CCB7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1FC291E20B2330018CCB7 /* Constant.swift */; };
 		814AD775AF33290C9756E1E4 /* Pods_ObjectMappperDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB9C3B889D474813C38D53E /* Pods_ObjectMappperDemo.framework */; };
@@ -34,6 +38,10 @@
 		0C9A93D31E20B8E80079217A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0C9A93D51E20CBA00079217A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0CAF45731E5EAD8A005B1F9F /* ObjectMappperDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ObjectMappperDemo.entitlements; sourceTree = "<group>"; };
+		0CAF457A1E5EE348005B1F9F /* ImageLoadingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoadingVC.swift; sourceTree = "<group>"; };
+		0CAF457B1E5EE348005B1F9F /* ImageLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageLoadingVC.xib; sourceTree = "<group>"; };
+		0CAF457E1E5EE3D3005B1F9F /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		0CAF457F1E5EE3D3005B1F9F /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		0CC1FC271E20B2140018CCB7 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		0CC1FC291E20B2330018CCB7 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		3AB9C3B889D474813C38D53E /* Pods_ObjectMappperDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectMappperDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +95,10 @@
 				0C9A93D51E20CBA00079217A /* Product.swift */,
 				0C90D4801E54640E008CBD6E /* LazyloadingVC.swift */,
 				0C90D4811E54640E008CBD6E /* LazyloadingVC.xib */,
+				0CAF457A1E5EE348005B1F9F /* ImageLoadingVC.swift */,
+				0CAF457B1E5EE348005B1F9F /* ImageLoadingVC.xib */,
+				0CAF457E1E5EE3D3005B1F9F /* ImageCell.swift */,
+				0CAF457F1E5EE3D3005B1F9F /* ImageCell.xib */,
 			);
 			path = ObjectMappperDemo;
 			sourceTree = "<group>";
@@ -121,7 +133,6 @@
 				0C7F0E061E20AE3A00640AB0 /* Resources */,
 				424986A88DF18990C58952A7 /* [CP] Embed Pods Frameworks */,
 				E9474ACB1347D54D1FBB1FC3 /* [CP] Copy Pods Resources */,
-				0C9A93D71E20EA8A0079217A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -178,7 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C7F0E161E20AE3A00640AB0 /* LaunchScreen.storyboard in Resources */,
+				0CAF457D1E5EE348005B1F9F /* ImageLoadingVC.xib in Resources */,
 				0C90D4831E54640E008CBD6E /* LazyloadingVC.xib in Resources */,
+				0CAF45811E5EE3D3005B1F9F /* ImageCell.xib in Resources */,
 				0C7F0E131E20AE3A00640AB0 /* Assets.xcassets in Resources */,
 				0C7F0E111E20AE3A00640AB0 /* Main.storyboard in Resources */,
 			);
@@ -187,19 +200,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C9A93D71E20EA8A0079217A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if hash tailor 2>/dev/null; then\n    tailor\nelse\n    echo \"warning: Please install Tailor from https://tailor.sh\"\nfi";
-		};
 		424986A88DF18990C58952A7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,6 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C7F0E0E1E20AE3A00640AB0 /* ViewController.swift in Sources */,
+				0CAF457C1E5EE348005B1F9F /* ImageLoadingVC.swift in Sources */,
+				0CAF45801E5EE3D3005B1F9F /* ImageCell.swift in Sources */,
 				0CC1FC281E20B2140018CCB7 /* APIService.swift in Sources */,
 				0C7F0E0C1E20AE3A00640AB0 /* AppDelegate.swift in Sources */,
 				0C9A93D41E20B8E80079217A /* User.swift in Sources */,
