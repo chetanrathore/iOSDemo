@@ -72,3 +72,16 @@ function getCategoryById(id) {
         });
     });
 }
+
+function getCategoryPageNo(page) {
+    let sql = "select categoryId, categoryName, description from Category where categoryId = " + id;
+    return new Promise(function (resolve, reject) {
+        dbCon.executeSql(sql, function (err, result) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(result);
+            }
+        });
+    });
+}

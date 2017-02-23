@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,12 +15,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-    
-        let vc = LazyloadingVC(nibName: "LazyloadingVC", bundle: nil)
-        window?.rootViewController = vc
+//         Override point for customization after application launch.
         
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.badge,.alert,.sound]) { (granted, error) in
+            
+        }
+        application.registerForRemoteNotifications()
+        let vc = ImageLoadingVC(nibName: "ImageLoadingVC", bundle: nil)
+        window?.rootViewController = vc
         return true
+    }
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let token = deviceToken.reduce("", { $0 + String(format: "%02X", $1)})
+        print(token)
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print(error)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

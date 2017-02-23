@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="mapVIew" destination="OO1-CI-e7h" id="58w-l2-D1c"/>
                 <outlet property="searchbar" destination="qhT-a7-3UJ" id="Yr0-Ei-ZdH"/>
+                <outlet property="segmentMapType" destination="HVA-wg-5Qn" id="pZw-fr-qiT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,6 +25,20 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OO1-CI-e7h" customClass="GMSMapView">
                     <rect key="frame" x="0.0" y="108" width="320" height="372"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HVA-wg-5Qn">
+                            <rect key="frame" x="8" y="16" width="121" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Map"/>
+                                <segment title="Satellite"/>
+                            </segments>
+                            <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="changeMap:" destination="-1" eventType="valueChanged" id="sWa-tI-A6F"/>
+                            </connections>
+                        </segmentedControl>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <searchBar contentMode="redraw" fixedFrame="YES" showsSearchResultsButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhT-a7-3UJ">

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C3C29CC1E5840200010D898 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C29CA1E5840200010D898 /* CollectionVC.swift */; };
+		0C3C29CD1E5840200010D898 /* CollectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C29CB1E5840200010D898 /* CollectionVC.xib */; };
+		0C3C29D01E5840D80010D898 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C29CE1E5840D80010D898 /* CollectionCell.swift */; };
+		0C3C29D11E5840D80010D898 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C29CF1E5840D80010D898 /* CollectionCell.xib */; };
+		0C3C29D41E5866180010D898 /* TableReorderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C29D21E5866180010D898 /* TableReorderVC.swift */; };
+		0C3C29D51E5866180010D898 /* TableReorderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C29D31E5866180010D898 /* TableReorderVC.xib */; };
+		0C5A49D91E5AC9BB00ED533A /* jsondata.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0C5A49D81E5AC9BB00ED533A /* jsondata.txt */; };
 		0C5D6E991E557B3A005B2A97 /* MapKitLocationSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5D6E971E557B3A005B2A97 /* MapKitLocationSearchVC.swift */; };
 		0C5D6E9A1E557B3A005B2A97 /* MapKitLocationSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5D6E981E557B3A005B2A97 /* MapKitLocationSearchVC.xib */; };
 		0C5D6EA11E55825B005B2A97 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5D6E9F1E55825B005B2A97 /* LocationSearchTable.swift */; };
@@ -33,6 +40,8 @@
 		0CB526DB1E4F285900422BDC /* ProgressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB526D91E4F285900422BDC /* ProgressVC.xib */; };
 		0CB526DE1E4F422300422BDC /* AutoSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB526DC1E4F422300422BDC /* AutoSizeCell.swift */; };
 		0CB526DF1E4F422300422BDC /* AutoSizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB526DD1E4F422300422BDC /* AutoSizeCell.xib */; };
+		0CBB49981E5C0EBC00D267D6 /* ImageCachingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB49961E5C0EBC00D267D6 /* ImageCachingVC.swift */; };
+		0CBB49991E5C0EBC00D267D6 /* ImageCachingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBB49971E5C0EBC00D267D6 /* ImageCachingVC.xib */; };
 		0CC130341E57274B00DFDE6F /* Map_Marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CC130331E57274B00DFDE6F /* Map_Marker.png */; };
 		0CD3D3D71E4D9BBD0028BEE5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD3D3D51E4D9BBD0028BEE5 /* MapVC.swift */; };
 		0CD3D3D81E4D9BBD0028BEE5 /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD3D3D61E4D9BBD0028BEE5 /* MapVC.xib */; };
@@ -71,6 +80,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C3C29CA1E5840200010D898 /* CollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
+		0C3C29CB1E5840200010D898 /* CollectionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionVC.xib; sourceTree = "<group>"; };
+		0C3C29CE1E5840D80010D898 /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		0C3C29CF1E5840D80010D898 /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		0C3C29D21E5866180010D898 /* TableReorderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableReorderVC.swift; sourceTree = "<group>"; };
+		0C3C29D31E5866180010D898 /* TableReorderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableReorderVC.xib; sourceTree = "<group>"; };
+		0C5A49D81E5AC9BB00ED533A /* jsondata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jsondata.txt; sourceTree = "<group>"; };
 		0C5D6E971E557B3A005B2A97 /* MapKitLocationSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitLocationSearchVC.swift; sourceTree = "<group>"; };
 		0C5D6E981E557B3A005B2A97 /* MapKitLocationSearchVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapKitLocationSearchVC.xib; sourceTree = "<group>"; };
 		0C5D6E9F1E55825B005B2A97 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
@@ -97,6 +113,8 @@
 		0CB526D91E4F285900422BDC /* ProgressVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressVC.xib; sourceTree = "<group>"; };
 		0CB526DC1E4F422300422BDC /* AutoSizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeCell.swift; sourceTree = "<group>"; };
 		0CB526DD1E4F422300422BDC /* AutoSizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoSizeCell.xib; sourceTree = "<group>"; };
+		0CBB49961E5C0EBC00D267D6 /* ImageCachingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCachingVC.swift; sourceTree = "<group>"; };
+		0CBB49971E5C0EBC00D267D6 /* ImageCachingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCachingVC.xib; sourceTree = "<group>"; };
 		0CC130331E57274B00DFDE6F /* Map_Marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map_Marker.png; sourceTree = "<group>"; };
 		0CD3D3D51E4D9BBD0028BEE5 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		0CD3D3D61E4D9BBD0028BEE5 /* MapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapVC.xib; sourceTree = "<group>"; };
@@ -293,6 +311,7 @@
 		0CFDAA361E4C96C20020FCEB /* HotelApp */ = {
 			isa = PBXGroup;
 			children = (
+				0C5A49D81E5AC9BB00ED533A /* jsondata.txt */,
 				0C6A88231E55C9670028C660 /* googlemap */,
 				0C6A88211E55C92C0028C660 /* images */,
 				0CFCE1391E53273D00E8DE0E /* FSCalendar */,
@@ -315,6 +334,14 @@
 				0CFCE1321E530FA600E8DE0E /* ZoomImageVC.swift */,
 				0CFCE1331E530FA600E8DE0E /* ZoomImageVC.xib */,
 				0CFCE16C1E53279800E8DE0E /* HotelApp-Bridging-Header.h */,
+				0C3C29CA1E5840200010D898 /* CollectionVC.swift */,
+				0C3C29CB1E5840200010D898 /* CollectionVC.xib */,
+				0C3C29CE1E5840D80010D898 /* CollectionCell.swift */,
+				0C3C29CF1E5840D80010D898 /* CollectionCell.xib */,
+				0C3C29D21E5866180010D898 /* TableReorderVC.swift */,
+				0C3C29D31E5866180010D898 /* TableReorderVC.xib */,
+				0CBB49961E5C0EBC00D267D6 /* ImageCachingVC.swift */,
+				0CBB49971E5C0EBC00D267D6 /* ImageCachingVC.xib */,
 			);
 			path = HotelApp;
 			sourceTree = "<group>";
@@ -396,13 +423,16 @@
 				0C5D6EA21E55825B005B2A97 /* LocationSearchTable.xib in Resources */,
 				0C5D6E9A1E557B3A005B2A97 /* MapKitLocationSearchVC.xib in Resources */,
 				0CFCE1701E53297700E8DE0E /* CalenderVC.xib in Resources */,
+				0C3C29D51E5866180010D898 /* TableReorderVC.xib in Resources */,
 				0CFDAA421E4C96C20020FCEB /* LaunchScreen.storyboard in Resources */,
+				0C3C29CD1E5840200010D898 /* CollectionVC.xib in Resources */,
 				0CFCE1371E53100A00E8DE0E /* bike.jpg in Resources */,
 				0CB526DB1E4F285900422BDC /* ProgressVC.xib in Resources */,
 				0CFDAA3F1E4C96C20020FCEB /* Assets.xcassets in Resources */,
 				0CB526D51E4F00D700422BDC /* star.png in Resources */,
 				0CFDAA4C1E4C96DC0020FCEB /* SignInVC.xib in Resources */,
 				0C90D4891E5491BC008CBD6E /* Marker.png in Resources */,
+				0CBB49991E5C0EBC00D267D6 /* ImageCachingVC.xib in Resources */,
 				0C90D47D1E54518B008CBD6E /* 5b667243-33a8-42fb-925b-38b9580285efback.jpg in Resources */,
 				0C90D4771E5430A8008CBD6E /* RestuarantCell.xib in Resources */,
 				0CFCE1311E52FF4600E8DE0E /* AutoresizeCellVC.xib in Resources */,
@@ -410,9 +440,11 @@
 				0CD3D3D81E4D9BBD0028BEE5 /* MapVC.xib in Resources */,
 				0CB526D71E4F03D600422BDC /* Arrow.png in Resources */,
 				0CB526CF1E4EFDD700422BDC /* WeekViewController.xib in Resources */,
+				0C3C29D11E5840D80010D898 /* CollectionCell.xib in Resources */,
 				0C5F84C71E54266A0055E4AD /* RestaurantVC.xib in Resources */,
 				0C6A88271E55CA870028C660 /* GoogleMapVC.xib in Resources */,
 				0C8C61941E4EEBDC0016DDD2 /* location.png in Resources */,
+				0C5A49D91E5AC9BB00ED533A /* jsondata.txt in Resources */,
 				0CFCE1351E530FA600E8DE0E /* ZoomImageVC.xib in Resources */,
 				0CC130341E57274B00DFDE6F /* Map_Marker.png in Resources */,
 				0CB526D31E4F002100422BDC /* WeeklyDataCell.xib in Resources */,
@@ -480,6 +512,7 @@
 				0CFCE1341E530FA600E8DE0E /* ZoomImageVC.swift in Sources */,
 				0C90D4761E5430A8008CBD6E /* RestuarantCell.swift in Sources */,
 				0C5D6EA51E55B63B005B2A97 /* MapRouteViewController.swift in Sources */,
+				0C3C29D01E5840D80010D898 /* CollectionCell.swift in Sources */,
 				0CFCE15C1E53273D00E8DE0E /* FSCalendar.m in Sources */,
 				0CFCE1651E53273D00E8DE0E /* FSCalendarExtensions.m in Sources */,
 				0CB526DE1E4F422300422BDC /* AutoSizeCell.swift in Sources */,
@@ -502,13 +535,16 @@
 				0CB526D21E4F002100422BDC /* WeeklyDataCell.swift in Sources */,
 				0CB526DA1E4F285900422BDC /* ProgressVC.swift in Sources */,
 				0CFCE1661E53273D00E8DE0E /* FSCalendarHeaderView.m in Sources */,
+				0C3C29CC1E5840200010D898 /* CollectionVC.swift in Sources */,
 				0CFDAA4B1E4C96DC0020FCEB /* SignInVC.swift in Sources */,
 				0CFCE1301E52FF4600E8DE0E /* AutoresizeCellVC.swift in Sources */,
 				0CFCE1671E53273D00E8DE0E /* FSCalendarScopeHandle.m in Sources */,
 				0CFCE1681E53273D00E8DE0E /* FSCalendarStickyHeader.m in Sources */,
+				0CBB49981E5C0EBC00D267D6 /* ImageCachingVC.swift in Sources */,
 				0C5D6EA11E55825B005B2A97 /* LocationSearchTable.swift in Sources */,
 				0CFCE16F1E53297700E8DE0E /* CalenderVC.swift in Sources */,
 				0CFCE1601E53273D00E8DE0E /* FSCalendarCollectionView.m in Sources */,
+				0C3C29D41E5866180010D898 /* TableReorderVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

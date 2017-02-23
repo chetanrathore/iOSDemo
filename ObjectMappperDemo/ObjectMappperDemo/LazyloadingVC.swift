@@ -20,7 +20,7 @@ class LazyloadingVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         super.viewDidLoad()
         tblCategory.dataSource = self
         tblCategory.delegate = self
-        getCategory()
+       // getCategory()
     }
 
     override func didReceiveMemoryWarning() {

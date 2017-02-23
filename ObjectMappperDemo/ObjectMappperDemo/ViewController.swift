@@ -16,8 +16,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //  getData()
-        getProducts()
+          getData()
+        //getProducts()
     }
 
     override func didReceiveMemoryWarning() {
