@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSPlacesClient.provideAPIKey("AIzaSyCwnZjVMIvsZS0UJf98LqCdNArrr3uBpng")
         
         // Override point for customization after application launch.
-        let signInVC = RestaurantVC(nibName: "RestaurantVC", bundle: nil)
+        let signInVC = ImageCachingVC(nibName: "ImageCachingVC", bundle: nil)
         let navigationVC = UINavigationController(rootViewController: signInVC)
         window?.rootViewController = navigationVC
         

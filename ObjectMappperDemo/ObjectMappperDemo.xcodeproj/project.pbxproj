@@ -33,6 +33,7 @@
 		0C90D4811E54640E008CBD6E /* LazyloadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LazyloadingVC.xib; sourceTree = "<group>"; };
 		0C9A93D31E20B8E80079217A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0C9A93D51E20CBA00079217A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0CAF45731E5EAD8A005B1F9F /* ObjectMappperDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ObjectMappperDemo.entitlements; sourceTree = "<group>"; };
 		0CC1FC271E20B2140018CCB7 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		0CC1FC291E20B2330018CCB7 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		3AB9C3B889D474813C38D53E /* Pods_ObjectMappperDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectMappperDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +74,7 @@
 		0C7F0E0A1E20AE3A00640AB0 /* ObjectMappperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0CAF45731E5EAD8A005B1F9F /* ObjectMappperDemo.entitlements */,
 				0CC1FC271E20B2140018CCB7 /* APIService.swift */,
 				0C7F0E0B1E20AE3A00640AB0 /* AppDelegate.swift */,
 				0C7F0E0D1E20AE3A00640AB0 /* ViewController.swift */,
@@ -142,7 +144,13 @@
 				TargetAttributes = {
 					0C7F0E071E20AE3A00640AB0 = {
 						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = Y55EBSG532;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -374,10 +382,17 @@
 			baseConfigurationReference = FC60AB7E992F1D2BA18F4873 /* Pods-ObjectMappperDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ObjectMappperDemo/ObjectMappperDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = ObjectMappperDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.ObjectMappperDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.shoppingapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "85690962-7822-42d5-aaa3-20d0e6dfe56b";
+				PROVISIONING_PROFILE_SPECIFIER = ShoppingAppPro;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -387,10 +402,17 @@
 			baseConfigurationReference = 83077DAE542266C169BEE14B /* Pods-ObjectMappperDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ObjectMappperDemo/ObjectMappperDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = ObjectMappperDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.ObjectMappperDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.shoppingapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "85690962-7822-42d5-aaa3-20d0e6dfe56b";
+				PROVISIONING_PROFILE_SPECIFIER = ShoppingAppPro;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

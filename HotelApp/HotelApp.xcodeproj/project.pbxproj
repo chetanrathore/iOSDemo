@@ -40,6 +40,8 @@
 		0CB526DB1E4F285900422BDC /* ProgressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB526D91E4F285900422BDC /* ProgressVC.xib */; };
 		0CB526DE1E4F422300422BDC /* AutoSizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB526DC1E4F422300422BDC /* AutoSizeCell.swift */; };
 		0CB526DF1E4F422300422BDC /* AutoSizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB526DD1E4F422300422BDC /* AutoSizeCell.xib */; };
+		0CBB49981E5C0EBC00D267D6 /* ImageCachingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB49961E5C0EBC00D267D6 /* ImageCachingVC.swift */; };
+		0CBB49991E5C0EBC00D267D6 /* ImageCachingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBB49971E5C0EBC00D267D6 /* ImageCachingVC.xib */; };
 		0CC130341E57274B00DFDE6F /* Map_Marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CC130331E57274B00DFDE6F /* Map_Marker.png */; };
 		0CD3D3D71E4D9BBD0028BEE5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD3D3D51E4D9BBD0028BEE5 /* MapVC.swift */; };
 		0CD3D3D81E4D9BBD0028BEE5 /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD3D3D61E4D9BBD0028BEE5 /* MapVC.xib */; };
@@ -111,6 +113,8 @@
 		0CB526D91E4F285900422BDC /* ProgressVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressVC.xib; sourceTree = "<group>"; };
 		0CB526DC1E4F422300422BDC /* AutoSizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSizeCell.swift; sourceTree = "<group>"; };
 		0CB526DD1E4F422300422BDC /* AutoSizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoSizeCell.xib; sourceTree = "<group>"; };
+		0CBB49961E5C0EBC00D267D6 /* ImageCachingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCachingVC.swift; sourceTree = "<group>"; };
+		0CBB49971E5C0EBC00D267D6 /* ImageCachingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCachingVC.xib; sourceTree = "<group>"; };
 		0CC130331E57274B00DFDE6F /* Map_Marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map_Marker.png; sourceTree = "<group>"; };
 		0CD3D3D51E4D9BBD0028BEE5 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		0CD3D3D61E4D9BBD0028BEE5 /* MapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapVC.xib; sourceTree = "<group>"; };
@@ -336,6 +340,8 @@
 				0C3C29CF1E5840D80010D898 /* CollectionCell.xib */,
 				0C3C29D21E5866180010D898 /* TableReorderVC.swift */,
 				0C3C29D31E5866180010D898 /* TableReorderVC.xib */,
+				0CBB49961E5C0EBC00D267D6 /* ImageCachingVC.swift */,
+				0CBB49971E5C0EBC00D267D6 /* ImageCachingVC.xib */,
 			);
 			path = HotelApp;
 			sourceTree = "<group>";
@@ -426,6 +432,7 @@
 				0CB526D51E4F00D700422BDC /* star.png in Resources */,
 				0CFDAA4C1E4C96DC0020FCEB /* SignInVC.xib in Resources */,
 				0C90D4891E5491BC008CBD6E /* Marker.png in Resources */,
+				0CBB49991E5C0EBC00D267D6 /* ImageCachingVC.xib in Resources */,
 				0C90D47D1E54518B008CBD6E /* 5b667243-33a8-42fb-925b-38b9580285efback.jpg in Resources */,
 				0C90D4771E5430A8008CBD6E /* RestuarantCell.xib in Resources */,
 				0CFCE1311E52FF4600E8DE0E /* AutoresizeCellVC.xib in Resources */,
@@ -533,6 +540,7 @@
 				0CFCE1301E52FF4600E8DE0E /* AutoresizeCellVC.swift in Sources */,
 				0CFCE1671E53273D00E8DE0E /* FSCalendarScopeHandle.m in Sources */,
 				0CFCE1681E53273D00E8DE0E /* FSCalendarStickyHeader.m in Sources */,
+				0CBB49981E5C0EBC00D267D6 /* ImageCachingVC.swift in Sources */,
 				0C5D6EA11E55825B005B2A97 /* LocationSearchTable.swift in Sources */,
 				0CFCE16F1E53297700E8DE0E /* CalenderVC.swift in Sources */,
 				0CFCE1601E53273D00E8DE0E /* FSCalendarCollectionView.m in Sources */,

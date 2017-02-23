@@ -56,6 +56,7 @@
 		0C593BF81E288E2B00ED9FF0 /* sorry-image-not-available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sorry-image-not-available.png"; sourceTree = "<group>"; };
 		0C593BFA1E2890DE00ED9FF0 /* ManageCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageCategoryViewController.swift; sourceTree = "<group>"; };
 		0C593BFB1E2890DE00ED9FF0 /* ManageCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageCategoryViewController.xib; sourceTree = "<group>"; };
+		0CC829B81E5D5BFB0035BB75 /* ShoppingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShoppingApp.entitlements; sourceTree = "<group>"; };
 		0CD37F511E278FA5007F7052 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0CD37F551E2795FE007F7052 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		0CD37F561E2795FE007F7052 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
@@ -216,6 +217,7 @@
 		0CE371871E278522005C77BC /* ShoppingApp */ = {
 			isa = PBXGroup;
 			children = (
+				0CC829B81E5D5BFB0035BB75 /* ShoppingApp.entitlements */,
 				0CD37F851E27A4DF007F7052 /* ExtraClass */,
 				0CD37F7E1E27A1B2007F7052 /* ServerAPI */,
 				0CD37F531E2795FE007F7052 /* IQKeyboardManagerSwift */,
@@ -276,7 +278,13 @@
 				TargetAttributes = {
 					0CE371841E278522005C77BC = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = Y55EBSG532;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -478,10 +486,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ShoppingApp/ShoppingApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = ShoppingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.ShoppingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.shoppingapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "85690962-7822-42d5-aaa3-20d0e6dfe56b";
+				PROVISIONING_PROFILE_SPECIFIER = ShoppingAppPro;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -490,10 +504,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ShoppingApp/ShoppingApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = ShoppingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.ShoppingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.shoppingapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "85690962-7822-42d5-aaa3-20d0e6dfe56b";
+				PROVISIONING_PROFILE_SPECIFIER = ShoppingAppPro;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

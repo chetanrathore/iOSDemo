@@ -1,7 +1,5 @@
 const mysql = require('mysql');
 var Promise = require("bluebird");
-Promise.promisifyAll(require("mysql/lib/Connection").prototype);
-Promise.promisifyAll(require("mysql/lib/Pool").prototype);
 
 function Connection() {
     this.pool = null;
