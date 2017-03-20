@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         let imgUrl = NSURL(string: "http://localhost:3000/author/1c3a892e-5ed0-4076-9fab-dece540258afbicycle-1280x720.jpg")
+        
         let request = URLRequest(url: imgUrl as! URL)
         img.setImageWith(request, placeholderImage: UIImage(named: "load.gif"), success: { (urlRequest, response,image) in
             print("Downloaded")
@@ -22,11 +23,10 @@ class LoginViewController: UIViewController {
             print(error)
         }
         
-        
 //        img.setImageWith(imgUrl as! URL)
         
-        let configuration = URLSessionConfiguration.default
-        let manager = AFURLSessionManager(sessionConfiguration: configuration)
+//        let configuration = URLSessionConfiguration.default
+//        let manager = AFURLSessionManager(sessionConfiguration: configuration)
         
 //        manager.downloadTask(with: request, progress: { (progress) in
 //            
@@ -35,9 +35,22 @@ class LoginViewController: UIViewController {
 //        }) { (urlResponse, url, error) in
 //            
 //        }
-        
+        getUsers()
     }
 
+    func getUsers(){
+        let manager = AFHTTPSessionManager()
+        manager.get("https://jsonplaceholder.typicode.com/users", parameters: [:], progress: { (progress) in
+            print("In process")
+        }, success: { (task, response) in
+            print(response ?? "Not found")
+            let data = User().toArray(jsonData: response)
+        }) { (task, error) in
+            print("Error")
+            print(error)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

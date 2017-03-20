@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         application.registerForRemoteNotifications()
         let vc = ImageLoadingVC(nibName: "ImageLoadingVC", bundle: nil)
+        
         window?.rootViewController = vc
         return true
     }

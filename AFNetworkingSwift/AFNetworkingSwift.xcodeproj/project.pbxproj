@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C8662D11E7D3CE3007D7D5E /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8662CF1E7D3CE3007D7D5E /* ImagesViewController.swift */; };
+		0C8662D21E7D3CE3007D7D5E /* ImagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8662D01E7D3CE3007D7D5E /* ImagesViewController.xib */; };
+		0C8662D51E7D3CFF007D7D5E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8662D31E7D3CFF007D7D5E /* ImageCell.swift */; };
+		0C8662D61E7D3CFF007D7D5E /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8662D41E7D3CFF007D7D5E /* ImageCell.xib */; };
+		0C8662D81E7D4FA6007D7D5E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8662D71E7D4FA6007D7D5E /* User.swift */; };
 		0CB4FA0B1E7BE81A007C7C9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB4FA0A1E7BE81A007C7C9B /* AppDelegate.swift */; };
 		0CB4FA0D1E7BE81A007C7C9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB4FA0C1E7BE81A007C7C9B /* ViewController.swift */; };
 		0CB4FA101E7BE81A007C7C9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4FA0E1E7BE81A007C7C9B /* Main.storyboard */; };
@@ -37,6 +42,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C8662CF1E7D3CE3007D7D5E /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		0C8662D01E7D3CE3007D7D5E /* ImagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesViewController.xib; sourceTree = "<group>"; };
+		0C8662D31E7D3CFF007D7D5E /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		0C8662D41E7D3CFF007D7D5E /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		0C8662D71E7D4FA6007D7D5E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0CB4FA071E7BE81A007C7C9B /* AFNetworkingSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFNetworkingSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB4FA0A1E7BE81A007C7C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CB4FA0C1E7BE81A007C7C9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +143,11 @@
 				0CB4FA341E7BEF34007C7C9B /* LoginViewController.swift */,
 				0CB4FA351E7BEF34007C7C9B /* LoginViewController.xib */,
 				0CB4FA3A1E7C0FF9007C7C9B /* ServerAPI.swift */,
+				0C8662CF1E7D3CE3007D7D5E /* ImagesViewController.swift */,
+				0C8662D01E7D3CE3007D7D5E /* ImagesViewController.xib */,
+				0C8662D31E7D3CFF007D7D5E /* ImageCell.swift */,
+				0C8662D41E7D3CFF007D7D5E /* ImageCell.xib */,
+				0C8662D71E7D4FA6007D7D5E /* User.swift */,
 			);
 			path = AFNetworkingSwift;
 			sourceTree = "<group>";
@@ -250,6 +265,8 @@
 				0CB4FA101E7BE81A007C7C9B /* Main.storyboard in Resources */,
 				0CB4FA5D1E7C1AE7007C7C9B /* loading.gif in Resources */,
 				0CB4FA5B1E7C1979007C7C9B /* load.gif in Resources */,
+				0C8662D61E7D3CFF007D7D5E /* ImageCell.xib in Resources */,
+				0C8662D21E7D3CE3007D7D5E /* ImagesViewController.xib in Resources */,
 				0CB4FA391E7BF703007C7C9B /* img.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,13 +291,16 @@
 				0CB4FA2E1E7BE82F007C7C9B /* AFNetworkReachabilityManager.m in Sources */,
 				0CB4FA581E7C15B9007C7C9B /* UIRefreshControl+AFNetworking.m in Sources */,
 				0CB4FA591E7C15B9007C7C9B /* UIWebView+AFNetworking.m in Sources */,
+				0C8662D51E7D3CFF007D7D5E /* ImageCell.swift in Sources */,
 				0CB4FA0B1E7BE81A007C7C9B /* AppDelegate.swift in Sources */,
 				0CB4FA2F1E7BE82F007C7C9B /* AFSecurityPolicy.m in Sources */,
+				0C8662D11E7D3CE3007D7D5E /* ImagesViewController.swift in Sources */,
 				0CB4FA301E7BE82F007C7C9B /* AFURLRequestSerialization.m in Sources */,
 				0CB4FA311E7BE82F007C7C9B /* AFURLResponseSerialization.m in Sources */,
 				0CB4FA361E7BEF34007C7C9B /* LoginViewController.swift in Sources */,
 				0CB4FA531E7C15B9007C7C9B /* AFNetworkActivityIndicatorManager.m in Sources */,
 				0CB4FA2D1E7BE82F007C7C9B /* AFHTTPSessionManager.m in Sources */,
+				0C8662D81E7D4FA6007D7D5E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +467,7 @@
 				0CB4FA1E1E7BE81A007C7C9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
