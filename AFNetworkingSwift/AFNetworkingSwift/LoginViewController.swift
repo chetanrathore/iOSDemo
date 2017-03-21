@@ -9,35 +9,72 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet var img: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let imgUrl = NSURL(string: "http://localhost:3000/author/1c3a892e-5ed0-4076-9fab-dece540258afbicycle-1280x720.jpg")
-        let request = URLRequest(url: imgUrl as! URL)
-        img.setImageWith(request, placeholderImage: UIImage(named: "load.gif"), success: { (urlRequest, response,image) in
-            print("Downloaded")
-        }) { (urlRequest, response, error) in
-            print(error)
+        
+        let tmp = "http://hotel-assist.com/images/loading.gif"
+        if let url = NSURL(string: tmp){
+            img.image = UIImage.animatedImage(withAnimatedGIFURL: (url as URL))
+        }
+        //      let request = URLRequest(url: imgUrl as! URL)
+        //        img.setImageWith(request, placeholderImage: UIImage(named: "load.gif"), success: { (urlRequest, response,image) in
+        //            print("Downloaded")
+        //            self.img.image = image
+        //        }) { (urlRequest, response, error) in
+        //            print(error)
+        //        }
+        
+        var stack = Stack<Int>()
+        stack.push(45)
+        stack.push(75)
+        stack.push(453)
+        
+        for i in stack.items{
+            print(i)
         }
         
+        var stack2 = Stack<String>()
+        stack2.push("tmp1")
+        stack2.push("str2")
+        stack2.push("str3")
         
-//        img.setImageWith(imgUrl as! URL)
+        for i in stack2.items{
+            print(i)
+        }
         
-        let configuration = URLSessionConfiguration.default
-        let manager = AFURLSessionManager(sessionConfiguration: configuration)
+        var stack3 = Stack<User>()
         
-//        manager.downloadTask(with: request, progress: { (progress) in
-//            
-//        }, destination: { (url, response) -> URL in
-//            
-//        }) { (urlResponse, url, error) in
-//            
-//        }
         
+        //        img.setImageWith(imgUrl as! URL)
+        
+        //        let configuration = URLSessionConfiguration.default
+        //        let manager = AFURLSessionManager(sessionConfiguration: configuration)
+        
+        //        manager.downloadTask(with: request, progress: { (progress) in
+        //
+        //        }, destination: { (url, response) -> URL in
+        //
+        //        }) { (urlResponse, url, error) in
+        //
+        //        }
+        getUsers()
     }
-
+    
+    func getUsers(){
+        let manager = AFHTTPSessionManager()
+        manager.get("https://jsonplaceholder.typicode.com/users", parameters: [:], progress: { (progress) in
+            print("In process")
+        }, success: { (task, response) in
+            // print(response ?? "Not found")
+            let data = User().toArray(jsonData: response)
+        }) { (task, error) in
+            print("Error")
+            print(error)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -73,7 +110,7 @@ class LoginViewController: UIViewController {
             print(error)
         }
     }
-  
+    
     @IBAction func HandleuploadImage(_ sender: UIButton) {
         let manager = AFHTTPSessionManager()
         var authorData = [String: Any]()
@@ -82,7 +119,7 @@ class LoginViewController: UIViewController {
         authorData["emailId"] = "admin121@example.com"
         authorData["gender"] = "Male"
         authorData["fullName"] = "admib123"
-
+        
         manager.post("http://localhost:3000/api/authors", parameters: authorData, constructingBodyWith: { (_ formData: AFMultipartFormData) in
             formData.appendPart(withFileData: data, name: "tmp", fileName: "tmp.jpg", mimeType: "image/jpeg")
             formData.appendPart(withFileData: data, name: "tmp", fileName: "tmp.jpg", mimeType: "image/jpeg")
@@ -99,5 +136,10 @@ class LoginViewController: UIViewController {
     }
     
     
-
+    @IBAction func handleBtnImageVC(_ sender: UIButton) {
+        let imageVc = ImagesViewController(nibName: "ImagesViewController", bundle: nil)
+        self.navigationController?.pushViewController(imageVc, animated: true)
+    }
+    
+    
 }

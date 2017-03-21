@@ -5,3 +5,5 @@
 #import "AFHTTPSessionManager.h"
 #import "AFURLRequestSerialization.h"
 #import "UIImageView+AFNetworking.h"
+#import "SDWebImage/UIImageView+WebCache.h"
+#import "UIImage+animatedGIF.h"
