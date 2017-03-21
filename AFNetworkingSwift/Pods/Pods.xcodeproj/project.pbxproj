@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52EE3099DB6752F1CE00C82F20A5A135 /* SwiftGifOrigin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A79597D7691CDD2E78B165697E47D33 /* SwiftGifOrigin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C97949A40A646B925303C9CE7242D73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		9D28D320CDDF14B96E37718DA78E4B90 /* SwiftGifOrigin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4196D8AF155DA5471346375971BE66 /* SwiftGifOrigin-dummy.m */; };
+		B9D37096AE69E9A9A8C203CF9F7B6312 /* Pods-AFNetworkingSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0E796671069421F9857354CBFA77A7B /* Pods-AFNetworkingSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7AC53D7F438A200F808EDEEBA1C8BC1 /* Pods-AFNetworkingSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D69B50954A146789D32F36AB4FFEA6A /* Pods-AFNetworkingSwift-dummy.m */; };
+		CDA5BAF6F21C918F87BED3C7BD8C6375 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38D269B98B57E56040F729F7EB45A57 /* UIImage+Gif.swift */; };
+		E915191F74D8F6F5FC2F0DFBE1E2B36A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D15A1BC38D0975D194B86DF00A21C412 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A3A28856BAC851AAC7F4ED21B44180F;
+			remoteInfo = SwiftGifOrigin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A79597D7691CDD2E78B165697E47D33 /* SwiftGifOrigin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-umbrella.h"; sourceTree = "<group>"; };
+		0C907120A7715AB90284F3F20C89C58C /* SwiftGifOrigin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-prefix.pch"; sourceTree = "<group>"; };
+		2EEA3601D1AB5BD50B63AA621A13D4CD /* Pods-AFNetworkingSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFNetworkingSwift.release.xcconfig"; sourceTree = "<group>"; };
+		534FA8DCF494B931D00E67718E616E39 /* Pods-AFNetworkingSwift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AFNetworkingSwift-resources.sh"; sourceTree = "<group>"; };
+		5CBBB046BB6B975176F79C8291A5F3D4 /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F82892FA6028D0F84BB9EC798A2E7CE /* SwiftGifOrigin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftGifOrigin.modulemap; sourceTree = "<group>"; };
+		63E7343B4623BF9ACC81098BFF577B13 /* SwiftGifOrigin.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGifOrigin.xcconfig; sourceTree = "<group>"; };
+		772627B8C907F857E26398194979672E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D69B50954A146789D32F36AB4FFEA6A /* Pods-AFNetworkingSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AFNetworkingSwift-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		949EA8F619608F83090D3ECBAC470A63 /* Pods_AFNetworkingSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AFNetworkingSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A38D269B98B57E56040F729F7EB45A57 /* UIImage+Gif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "SwiftGifCommon/UIImage+Gif.swift"; sourceTree = "<group>"; };
+		BB0895DDE7AAE571C8D042972DBE24FB /* Pods-AFNetworkingSwift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AFNetworkingSwift-acknowledgements.plist"; sourceTree = "<group>"; };
+		BDDCA3B0E4AF778FB4C8E95BC65A38C8 /* Pods-AFNetworkingSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AFNetworkingSwift.modulemap"; sourceTree = "<group>"; };
+		C644FFD998DE29128E8E8D0CD5468757 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC63D6B56BC0D3662EFE89DECD525ACC /* Pods-AFNetworkingSwift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AFNetworkingSwift-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E1F5BA2B73A6C2545162FD922D97D760 /* Pods-AFNetworkingSwift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AFNetworkingSwift-frameworks.sh"; sourceTree = "<group>"; };
+		F0E796671069421F9857354CBFA77A7B /* Pods-AFNetworkingSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AFNetworkingSwift-umbrella.h"; sourceTree = "<group>"; };
+		F4A60366E02A1C477A3FC8A8A9EB4798 /* Pods-AFNetworkingSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFNetworkingSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		FA4196D8AF155DA5471346375971BE66 /* SwiftGifOrigin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftGifOrigin-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7FE5A127555D077C776344C82D61D077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E915191F74D8F6F5FC2F0DFBE1E2B36A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF57C188367B2D9EB6668E2C3C835768 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C97949A40A646B925303C9CE7242D73 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FD8CE5DEB17C1C76F236ADF231BD040 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				772627B8C907F857E26398194979672E /* Info.plist */,
+				5F82892FA6028D0F84BB9EC798A2E7CE /* SwiftGifOrigin.modulemap */,
+				63E7343B4623BF9ACC81098BFF577B13 /* SwiftGifOrigin.xcconfig */,
+				FA4196D8AF155DA5471346375971BE66 /* SwiftGifOrigin-dummy.m */,
+				0C907120A7715AB90284F3F20C89C58C /* SwiftGifOrigin-prefix.pch */,
+				0A79597D7691CDD2E78B165697E47D33 /* SwiftGifOrigin-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftGifOrigin";
+			sourceTree = "<group>";
+		};
+		26699727C250983FF494AD0DE3CFBC88 /* SwiftGifOrigin */ = {
+			isa = PBXGroup;
+			children = (
+				A38D269B98B57E56040F729F7EB45A57 /* UIImage+Gif.swift */,
+				1FD8CE5DEB17C1C76F236ADF231BD040 /* Support Files */,
+			);
+			path = SwiftGifOrigin;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		419D65131144F72A642A4DE55D27A6F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				949EA8F619608F83090D3ECBAC470A63 /* Pods_AFNetworkingSwift.framework */,
+				5CBBB046BB6B975176F79C8291A5F3D4 /* SwiftGifOrigin.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78AA6F21C723EC1F8115F1116698A216 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C64B6F975643B0F8A5D8228C0A1E01D6 /* Pods-AFNetworkingSwift */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CBDE1A1234E4B1D43F65A57BED38E87C /* Pods */,
+				419D65131144F72A642A4DE55D27A6F5 /* Products */,
+				78AA6F21C723EC1F8115F1116698A216 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C64B6F975643B0F8A5D8228C0A1E01D6 /* Pods-AFNetworkingSwift */ = {
+			isa = PBXGroup;
+			children = (
+				C644FFD998DE29128E8E8D0CD5468757 /* Info.plist */,
+				BDDCA3B0E4AF778FB4C8E95BC65A38C8 /* Pods-AFNetworkingSwift.modulemap */,
+				CC63D6B56BC0D3662EFE89DECD525ACC /* Pods-AFNetworkingSwift-acknowledgements.markdown */,
+				BB0895DDE7AAE571C8D042972DBE24FB /* Pods-AFNetworkingSwift-acknowledgements.plist */,
+				7D69B50954A146789D32F36AB4FFEA6A /* Pods-AFNetworkingSwift-dummy.m */,
+				E1F5BA2B73A6C2545162FD922D97D760 /* Pods-AFNetworkingSwift-frameworks.sh */,
+				534FA8DCF494B931D00E67718E616E39 /* Pods-AFNetworkingSwift-resources.sh */,
+				F0E796671069421F9857354CBFA77A7B /* Pods-AFNetworkingSwift-umbrella.h */,
+				F4A60366E02A1C477A3FC8A8A9EB4798 /* Pods-AFNetworkingSwift.debug.xcconfig */,
+				2EEA3601D1AB5BD50B63AA621A13D4CD /* Pods-AFNetworkingSwift.release.xcconfig */,
+			);
+			name = "Pods-AFNetworkingSwift";
+			path = "Target Support Files/Pods-AFNetworkingSwift";
+			sourceTree = "<group>";
+		};
+		CBDE1A1234E4B1D43F65A57BED38E87C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26699727C250983FF494AD0DE3CFBC88 /* SwiftGifOrigin */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		458C65A68C420ED84D23530988B1B279 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9D37096AE69E9A9A8C203CF9F7B6312 /* Pods-AFNetworkingSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C048DE20CC1384BE5A1F1D5E838FC119 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52EE3099DB6752F1CE00C82F20A5A135 /* SwiftGifOrigin-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0A3A28856BAC851AAC7F4ED21B44180F /* SwiftGifOrigin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25980F063E08B839FD49739E6C499431 /* Build configuration list for PBXNativeTarget "SwiftGifOrigin" */;
+			buildPhases = (
+				8B4BD90B3E5F81C5AB22EF1CF3993ABB /* Sources */,
+				DF57C188367B2D9EB6668E2C3C835768 /* Frameworks */,
+				C048DE20CC1384BE5A1F1D5E838FC119 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftGifOrigin;
+			productName = SwiftGifOrigin;
+			productReference = 5CBBB046BB6B975176F79C8291A5F3D4 /* SwiftGifOrigin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2C8C38CF301322B23AB5A68645BC1D7B /* Pods-AFNetworkingSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA38A5481FF597060459E77714CFE55A /* Build configuration list for PBXNativeTarget "Pods-AFNetworkingSwift" */;
+			buildPhases = (
+				030B845636333192D6697DAA82219B2C /* Sources */,
+				7FE5A127555D077C776344C82D61D077 /* Frameworks */,
+				458C65A68C420ED84D23530988B1B279 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41696FF6B6C2EAD76DFD21486A244E78 /* PBXTargetDependency */,
+			);
+			name = "Pods-AFNetworkingSwift";
+			productName = "Pods-AFNetworkingSwift";
+			productReference = 949EA8F619608F83090D3ECBAC470A63 /* Pods_AFNetworkingSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 419D65131144F72A642A4DE55D27A6F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C8C38CF301322B23AB5A68645BC1D7B /* Pods-AFNetworkingSwift */,
+				0A3A28856BAC851AAC7F4ED21B44180F /* SwiftGifOrigin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		030B845636333192D6697DAA82219B2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7AC53D7F438A200F808EDEEBA1C8BC1 /* Pods-AFNetworkingSwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B4BD90B3E5F81C5AB22EF1CF3993ABB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D28D320CDDF14B96E37718DA78E4B90 /* SwiftGifOrigin-dummy.m in Sources */,
+				CDA5BAF6F21C918F87BED3C7BD8C6375 /* UIImage+Gif.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41696FF6B6C2EAD76DFD21486A244E78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftGifOrigin;
+			target = 0A3A28856BAC851AAC7F4ED21B44180F /* SwiftGifOrigin */;
+			targetProxy = D15A1BC38D0975D194B86DF00A21C412 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A20149475F561A8012DC10CBD33E5F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63E7343B4623BF9ACC81098BFF577B13 /* SwiftGifOrigin.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftGifOrigin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1C908C9E23B0214C9B9B55CCB6C90A02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 3.0;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		889F4CB29ACA23D66DA70ED2D6A80DDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4A60366E02A1C477A3FC8A8A9EB4798 /* Pods-AFNetworkingSwift.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AFNetworkingSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AFNetworkingSwift/Pods-AFNetworkingSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AFNetworkingSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A9E8533E615EA7FD02D27524E68EE149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 3.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D9306EFC7412DE0DE955B72978AB3D9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EEA3601D1AB5BD50B63AA621A13D4CD /* Pods-AFNetworkingSwift.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AFNetworkingSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AFNetworkingSwift/Pods-AFNetworkingSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AFNetworkingSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F077BC26AE9198EF0FF69D74248EF31D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63E7343B4623BF9ACC81098BFF577B13 /* SwiftGifOrigin.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftGifOrigin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25980F063E08B839FD49739E6C499431 /* Build configuration list for PBXNativeTarget "SwiftGifOrigin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F077BC26AE9198EF0FF69D74248EF31D /* Debug */,
+				1A20149475F561A8012DC10CBD33E5F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E8533E615EA7FD02D27524E68EE149 /* Debug */,
+				1C908C9E23B0214C9B9B55CCB6C90A02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA38A5481FF597060459E77714CFE55A /* Build configuration list for PBXNativeTarget "Pods-AFNetworkingSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				889F4CB29ACA23D66DA70ED2D6A80DDC /* Debug */,
+				D9306EFC7412DE0DE955B72978AB3D9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

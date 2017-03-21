@@ -15,7 +15,7 @@ class ImageLoadingVC: UIViewController, UITableViewDataSource, UITableViewDelega
     var pageNo: Int = 0
     var totalPages: Int = 0
     @IBOutlet var tblAuthor: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tblAuthor.dataSource = self
@@ -24,12 +24,12 @@ class ImageLoadingVC: UIViewController, UITableViewDataSource, UITableViewDelega
         getAuthor()
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func getAuthor() {
         APIService.sharedInstance.sendRequest(method: "GET", postedData: [:], apiMethod: apiAuthor+String(pageNo), completion: { (resultData, isError, isConnectionError) in
             print(resultData)
@@ -43,20 +43,20 @@ class ImageLoadingVC: UIViewController, UITableViewDataSource, UITableViewDelega
             self.tblAuthor.reloadData()
         })
     }
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return author.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! ImageCell
         let author = self.author[indexPath.row]
         if author.profile != nil {
-        let url = baseUrl + "/author/" + author.profile!
+            let url = baseUrl + "/author/" + author.profile!
             cell.img.imageFromServerURL(urlString: url)
         }
         if indexPath.row == (self.author.count - 1) {
@@ -67,11 +67,11 @@ class ImageLoadingVC: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         return cell
     }
-
+    
 }
 
 extension UIImageView {
-
+    
     public func imageFromServerURL(urlString: String) {
         let downloadActivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
         downloadActivityIndicator.center = CGPoint(x: self.bounds.size.width/2, y: self.bounds.size.height/2)
@@ -90,5 +90,5 @@ extension UIImageView {
             })
         }).resume()
     }
-
+    
 }

@@ -15,7 +15,7 @@ class ImageCachingVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     var arrData:[AnyObject]!
     var task: URLSessionDownloadTask!
     var session:URLSession!
-    var chache:NSCache<AnyObject, AnyObject>!
+    var cache:NSCache<AnyObject, AnyObject>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class ImageCachingVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         task = URLSessionDownloadTask()
         
         self.arrData = []
-        self.chache = NSCache()
+        self.cache = NSCache()
         
         refresh = UIRefreshControl()
         refresh.addTarget(self, action: #selector(self.getData), for: .valueChanged)
@@ -73,8 +73,8 @@ class ImageCachingVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = data["trackName"] as? String
         cell.imageView?.image = #imageLiteral(resourceName: "location.png")
         
-        if self.chache.object(forKey: indexPath.row as AnyObject) != nil{
-            cell.imageView?.image = self.chache.object(forKey: indexPath.row as AnyObject) as? UIImage
+        if self.cache.object(forKey: indexPath.row as AnyObject) != nil{
+            cell.imageView?.image = self.cache.object(forKey: indexPath.row as AnyObject) as? UIImage
         }else{
             let strUrl = data["artworkUrl100"] as! String
             let imagUrl: URL = URL(string: strUrl)!
@@ -86,7 +86,7 @@ class ImageCachingVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                         let img = UIImage(data: data)
                         let cell = self.tblData.cellForRow(at: indexPath)
                         cell?.imageView?.image = img
-                        self.chache.setObject(img!, forKey: indexPath.row as AnyObject)
+                        self.cache.setObject(img!, forKey: indexPath.row as AnyObject)
                     }
                 }catch{
                     print("fail to download image")
@@ -94,7 +94,6 @@ class ImageCachingVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             })
             task.resume()
         }
-        
         return cell
     }
 }

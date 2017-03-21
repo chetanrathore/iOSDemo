@@ -8,6 +8,28 @@
 
 import Foundation
 
+struct Stack<T> {
+    var items = [T]()
+    mutating func push(_ item: T) {
+        items.append(item)
+    }
+}
+
+
+class Map<T>{
+    let arr = [T]()
+    
+    func toArray(json: Any?){
+    }
+
+}
+
+func bindData<T>(dic: NSDictionary,str: String, type: inout T){
+    if let val: T = dic[str] as? T{
+        type = val
+    }
+}
+
 class User{
     
     private var userData = [User]()
@@ -29,24 +51,28 @@ class User{
         for data in jsonArr{
             let objUser = User()
             let obj = data as! NSDictionary
-            if let id = obj.value(forKey: "id") as? Int{
-                objUser.id = id
-            }
-            if let name = obj.value(forKey: "name") as? String{
-                objUser.name = name
-            }
-            if let username = obj.value(forKey: "username") as? String{
-                objUser.username = username
-            }
-            if let email = obj.value(forKey: "email") as? String{
-                objUser.email = email
-            }
-            if let phone = obj.value(forKey: "phone") as? String{
-                objUser.phone = phone
-            }
-            if let website = obj.value(forKey: "website") as? String{
-                objUser.website = website
-            }
+            bindData(dic: obj, str: "id", type: &objUser.id)
+            bindData(dic: obj, str: "name", type: &objUser.name)
+            bindData(dic: obj, str: "username", type: &objUser.username)
+            bindData(dic: obj, str: "email", type: &objUser.email)
+            bindData(dic: obj, str: "phone", type: &objUser.phone)
+            bindData(dic: obj, str: "website", type: &objUser.website)
+            
+//            if let name = obj.value(forKey: "name") as? String{
+//                objUser.name = name
+//            }
+//            if let username = obj.value(forKey: "username") as? String{
+//                objUser.username = username
+//            }
+//            if let email = obj.value(forKey: "email") as? String{
+//                objUser.email = email
+//            }
+//            if let phone = obj.value(forKey: "phone") as? String{
+//                objUser.phone = phone
+//            }
+//            if let website = obj.value(forKey: "website") as? String{
+//                objUser.website = website
+//            }
             if let address = obj.value(forKey: "address") as? NSDictionary{
                 objUser.address = Addresss().toAddress(address: address)
             }
@@ -122,8 +148,10 @@ class Company{
         if let bs = company.value(forKey: "bs") as? String{
             objCompany.bs = bs
         }
-        
         return objCompany
     }
     
 }
+
+
+
